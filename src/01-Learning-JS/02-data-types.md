@@ -62,8 +62,28 @@ Primitives enable you to perform fundamental data operations.
 3. Print them all to the console with `console.log()`.
 4. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
-```javascript
-// Write your code in here
+```js
+let book = "Franzen"
+let novels = 6
+let writer = true
+let singer = false
+let songs  = null
+let x
+let pen = {
+  normal: "fountain",
+  fancy: "ballpoint",
+}
+pen.other = "pencil"
+
+console.log(book)
+console.log(novels)
+console.log(writer)
+console.log(singer)
+console.log(songs)
+console.log(x)
+console.log(pen.other)
+
+
 ```
 
 ## Submission
