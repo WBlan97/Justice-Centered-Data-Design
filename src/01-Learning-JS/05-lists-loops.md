@@ -359,7 +359,7 @@ You have the choice about which for loop to use: `for...in` vs. `for...of`. You 
 
 Let's use the following array lists for these exercises.
 
-```javascript
+```j
 let professions = ["married", "laborer", "widow", "laborer", ]
 let childStatus = ["Child Alana 10 days", "Catherine 2 mos", "", "Charles Riley afed 10 days" ]
 let sex = ["f", "m", "f", "m", "i"]
@@ -392,12 +392,12 @@ professions
 
 For this first exercise, I'll provide you with the basic structure:
 
-```javascript
+```js
 // Declare new and freshly empty array in which to push new items
 let lessProfessions = []
-for () {
-  if () {
-    // Do something in here
+for (const pNum in professions) {
+  if (pNum != 1) {
+    lessProfessions.push(professions[pNum])
   }
 }
 ```
@@ -406,8 +406,7 @@ for () {
   Interactive output of the array of <code>lessProfessions</code>
 </p>
 
-```javascript
-// Convert me to output `lessProfessions`
+```js
 lessProfessions
 ```
 
@@ -415,25 +414,27 @@ lessProfessions
 
 **Goal**: Add a new profession as a String, `"spinster"`, to your `professions` list, then log it to the web console.
 
-```javascript
-// Convert and code here
+```js
+let newProfessions = ["married", "laborer", "widow", "laborer", "spinster"]
+console.log(newProfessions)
 ```
 
 <p class="codeblock-caption">
-  Interactive output of the array of <code>lessProfessions</code>
+  Interactive output of the array of <code>newProfessions</code>
 </p>
 
-```javascript
-// Convert me to output `professions`
-professions
+```js
+newProfessions
 ```
 
 ### E3. Loop through an array and log to the console
 
 **Goal**: Make a `for` loop that considers each item in the `professions` array and logs "Person's profession is ___", which "___" should be the profession from the array.
 
-```javascript
-// Convert and code here
+```js
+for (const profession of newProfessions) {
+    console.log("Person's professions is")
+  }
 ```
 
 ### E4. More conditional pushing with `for...of`
