@@ -63,6 +63,7 @@ Primitives enable you to perform fundamental data operations.
 4. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
 ``` js
+
 let book = "Franzen"
 let novels = 6
 let writer = true
