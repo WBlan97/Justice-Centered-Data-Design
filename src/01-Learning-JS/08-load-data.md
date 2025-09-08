@@ -64,7 +64,7 @@ In this project, check out the `/src/data/events.json` file, which is a small ex
   What other properties of JSON do you notice?
 </p>
 
-**RESPONSE**: Write your response here.
+**RESPONSE**: Each row is a different value name, and each key value pair, at least in this JSON, contains different data types.
 
 ## 1.8.2 Framework's FileAttachment()
 
@@ -221,6 +221,12 @@ Goal: Demonstrate your understanding of the CSV file format by creating a mini C
 Use the empty codeblock below.
 
 ```
+Country,Capital,Continent
+Canada,Ottawa,North America
+Brazil,Brasilia,South America
+Japan,Tokyo,Asia
+France,Paris,Europe
+Nigeria,Lagos,Africa
 ```
 
 ### E2. Load a CSV file
@@ -234,11 +240,13 @@ In this case, load the following CSV file: `nc_absentee_mail_2024.csv`.
 2. In the second codeblock, use `console.log()` to log the following properties to the console: `.name` and `.size`.
 3. Still in the second codeblock, add a second `console.log()` and log the first object in the Array to the console.
 
-```javascript
-// Your FileAttachment() code goes here
+```js
+let == 
+console.log("Print!")
+
 ```
 
-```javascript
+```js
 // Your other code with your variable goes here
 ```
 
