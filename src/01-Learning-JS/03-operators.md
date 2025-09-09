@@ -215,8 +215,8 @@ First, go back to the last chapter and grab the suite of primitives that you cre
 4. Print them all to the console with `console.log()`.
 5. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
-```js
 
+```javascript
 //variables
 let singer = "Buckley"
 let albums = 1
@@ -249,11 +249,6 @@ console.log(singerAndDancer)
 console.log(albumNumber)
 console.log(wrongAlbums)
 console.log(writer)
-```
-
-
-```javascript
-// Write your code in here
 ```
 
 ## Submission
