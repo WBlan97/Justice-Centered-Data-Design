@@ -335,7 +335,7 @@ Now you can combine for loops and conditionals to create more dynamic results.
 
 Let's log any ages less than 30.
 
-```javascript
+```js
 let ages = [22, 53, 21, 55]
 
 for (const a in ages) {
@@ -359,7 +359,7 @@ You have the choice about which for loop to use: `for...in` vs. `for...of`. You 
 
 Let's use the following array lists for these exercises.
 
-```j
+```js
 let professions = ["married", "laborer", "widow", "laborer", ]
 let childStatus = ["Child Alana 10 days", "Catherine 2 mos", "", "Charles Riley afed 10 days" ]
 let sex = ["f", "m", "f", "m", "i"]
