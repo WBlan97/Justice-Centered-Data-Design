@@ -209,6 +209,8 @@ let nc2024GroupedVoterInfo = [
 
 ```js
 nc2024GroupedVoterInfo[0]
+nc2024GroupedVoterInfo[1]
+nc2024GroupedVoterInfo[2]
 ```
 
 ### Accessing, setting, and updating object properties
@@ -255,6 +257,8 @@ Easy review here. Use the index position to access each object literal in the Ar
 
 ```js
 nc2024VoterInfo[0]
+nc2024VoterInfo[1]
+nc2024VoterInfo[2]
 ```
 
 #### Access object properties with dot notation
