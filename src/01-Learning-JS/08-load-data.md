@@ -241,8 +241,8 @@ In this case, load the following CSV file: `nc_absentee_mail_2024.csv`.
 3. Still in the second codeblock, add a second `console.log()` and log the first object in the Array to the console.
 
 ```js
-let == 
-console.log("Print!")
+let absenteeMail = FileAttachment ("./..data/")
+
 
 ```
 
