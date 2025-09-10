@@ -245,8 +245,10 @@ const absenteeMail = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024.c
 ```
 
 ```js
-console.log(absenteeMail.size,absenteeMail.name)
+// This code returned undefined, undefined: console.log(absenteeMail.size,absenteeMail.name)
 
+console.log(absenteeMail.length)
+//This code worked. Is it something to do with observable?
 
 console.log(absenteeMail[0])
 ```
