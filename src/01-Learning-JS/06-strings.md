@@ -75,7 +75,7 @@ stringEx[1] // gives value of "o"
 
 Try out the following common methods for strings located in the table below. Start by defining the variable, `str1` below in your browser's console.
 
-```
+```js
 // Running string example
 let str1 = "Cat In The Hat"
 ```
@@ -129,8 +129,8 @@ vonnegut
 
 Let's start simple. Output the length of the String, `vonnegut`, in a `js` codeblock below.
 
-```javascript
-// Convert me to a js block
+```js
+vonnegut.length
 ```
 
 ### E2. Replace parts of a String
@@ -147,20 +147,19 @@ If you review the String, you will notice how there are section breaks represent
     </div>
 4. In the fourth codeblock, output the new variable, `vonnegutNoSBDQ`, to verify if it worked.
 
-```javascript
-// Convert me to a js block and complete #1
+```js
+let vonnegutNoSB = vonnegut.replaceAll("*","")
+```
+
+```js
+vonnegutNoSB
 ```
 
 ```javascript
-// Convert me to a js block and complete #2
+let vonnegutNoSBDQ 
 ```
 
 ```javascript
-// Convert me to a js block and complete #3
-```
-
-```javascript
-// Convert me to output the grand finale!
 vonnegutNoSBDQ
 ```
 
