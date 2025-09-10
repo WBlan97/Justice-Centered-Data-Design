@@ -245,10 +245,11 @@ const absenteeMail = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024.c
 ```
 
 ```js
-absenteeMail
 absenteeMail.size
 absenteeMail.name
-// Your other code with your variable goes here
+
+
+console.log()
 ```
 
 Make sure that you verify the logs are there!
