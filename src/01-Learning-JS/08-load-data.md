@@ -241,12 +241,13 @@ In this case, load the following CSV file: `nc_absentee_mail_2024.csv`.
 3. Still in the second codeblock, add a second `console.log()` and log the first object in the Array to the console.
 
 ```js
-const absenteeMail = FileAttachment ("./../data/nc-voters/nc_absentee_mail_2024.csv").csv({typed: true})
-
+const absenteeMail = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024.csv").csv({typed: true})
 ```
 
 ```js
 absenteeMail
+absenteeMail.size
+absenteeMail.name
 // Your other code with your variable goes here
 ```
 
