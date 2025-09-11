@@ -359,7 +359,7 @@ You have the choice about which for loop to use: `for...in` vs. `for...of`. You 
 
 Let's use the following array lists for these exercises.
 
-```js
+```javascript
 let professions = ["married", "laborer", "widow", "laborer", ]
 let childStatus = ["Child Alana 10 days", "Catherine 2 mos", "", "Charles Riley afed 10 days" ]
 let sex = ["f", "m", "f", "m", "i"]
@@ -386,12 +386,7 @@ let sex = ["f", "m", "f", "m", "i"]
   Interactive output of the array of <code>professions</code>
 </p>
 
-```js
-professions
-```
-
 For this first exercise, I'll provide you with the basic structure:
-
 ```js
 // Declare new and freshly empty array in which to push new items
 let lessProfessions = []
@@ -433,7 +428,7 @@ newProfessions
 
 ```js
 for (const profession of newProfessions) {
-    console.log("Person's professions is")
+    console.log("Person's professions is " + profession)
   }
 ```
 
