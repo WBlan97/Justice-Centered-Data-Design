@@ -215,8 +215,40 @@ First, go back to the last chapter and grab the suite of primitives that you cre
 4. Print them all to the console with `console.log()`.
 5. Check your work, as you go, by opening the browser console with the **Inspect Element** tool.
 
+
 ```javascript
-// Write your code in here
+//variables
+let singer = "Buckley"
+let albums = 1
+let dancer = false
+let books = null
+let river
+let songs = {
+  best: "soReal",
+  worst: "vancouver"
+}
+
+console.log(singer)
+console.log(albums)
+console.log(dancer)
+console.log(books)
+console.log(river)
+console.log(songs)
+
+//operators
+let yesSinger = singer == "Buckley"
+let singerOrDancer = singer == "Buckley" || dancer == true
+let singerAndDancer = singer == "Buckley" && dancer == true
+let albumNumber = albums >= 0
+let wrongAlbums = albums != 3
+let writer = books == 5
+
+console.log(yesSinger)
+console.log(singerOrDancer)
+console.log(singerAndDancer)
+console.log(albumNumber)
+console.log(wrongAlbums)
+console.log(writer)
 ```
 
 ## Submission
