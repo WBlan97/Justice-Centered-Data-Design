@@ -207,29 +207,29 @@ There are other conventions and rules, but we don't need to belabor them right n
  *    that will make sure each favorite food is
  *    logged to the correct place in the console.
 **/
-Let faveFood1 = "Enchiladas"
-Let faveFood2 = "Pasta"
+let faveFood1 = "Enchiladas"
+let faveFood2 = "Pasta"
 
 console.log(
   "Ok, so y'all know that my #1 favorite food is ",
-  Enchiladas,
-  ", and my second favorite food is ", Pasta
+  faveFood1,
+  ", and my second favorite food is ", faveFood2
 )
 
 if (faveFood2.length > 0) {
   // Redeclare _faveFood1_ within this scope only
-Var faveFood1 = "Burger"
+let faveFood1 = "Burger"
 
   console.log(
     "jk! ",
-    Burger ,
+    faveFood1,
     " is actually my #1 favorite food."
   )
 }
 
 console.log(
   "Ok. Don't get mad, but my #1 favorite is ",
-  Burger, " actually."
+  faveFood1, " actually."
 )
 ```
 
