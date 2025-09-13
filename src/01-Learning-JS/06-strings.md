@@ -159,7 +159,7 @@ vonnegutNoSB
 let vonnegutClean = vonnegutNoSB.replaceAll("\"", "").replaceAll("\'", "").replaceAll(",""").replaceAll(".", "").replaceAll("?", "").replaceAll(";", "").replaceAll("--", " ")
 ```
 ```js
-vonnegutClean
+vonnegutNoSB
 ``
 
 ### E3. Same thing, but better method with a for loop
