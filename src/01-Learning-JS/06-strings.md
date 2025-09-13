@@ -135,7 +135,7 @@ vonnegut.length
 
 ### E2. Replace parts of a String
 
-If you review the String, you will notice how there are section breaks represented with the following characters: `       *       *       *       *       *`. Here's what I want you to practice doing across 4 codeblocks:
+If you review the String, you will notice how there are section breaks represented with the following characters: C`. Here's what I want you to practice doing across 4 codeblocks:
 
 1. In the first codeblock, remove ***all*** of these section breaks in `vonnegut` and replace them with an empty string (`""`). Assign it to a new variable: `vonnegutNoSB`.
 2. In the second codeblock, output the new variable, `vonnegutNoSB`, to verify if it worked.
@@ -148,20 +148,19 @@ If you review the String, you will notice how there are section breaks represent
 4. In the fourth codeblock, output the new variable, `vonnegutNoSBDQ`, to verify if it worked.
 
 ```js
-let vonnegutNoSB = vonnegut.replaceAll("*","")
+let vonnegutNoSB = vonnegut.replaceAll('*',"")
 ```
 
 ```js
 vonnegutNoSB
 ```
 
-```javascript
-let vonnegutNoSBDQ 
+```js
+let vonnegutClean = vonnegutNoSB.replaceAll("\"", "").replaceAll("\'", "").replaceAll(",""").replaceAll(".", "").replaceAll("?", "").replaceAll(";", "").replaceAll("--", " ")
 ```
-
-```javascript
-vonnegutNoSBDQ
-```
+```js
+vonnegutClean
+``
 
 ### E3. Same thing, but better method with a for loop
 
