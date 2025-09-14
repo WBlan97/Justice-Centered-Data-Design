@@ -228,7 +228,7 @@ Here's how:
     const parseDateSlash = utcParse("%d/%m/%Y")
     ```
 2. Use the parser assigned to `parseDateSlash` to convert dates into a JS Date() object that follow the set's particular format, but are currently Strings.
-    ```javascript
+    ```js
     // Result: Date Sun Nov 09 2025 19:00:00 GMT-0500 (Eastern Standard Time)
     parseDateSlash(nc2024SampleVoters[0].ballot_req_dt)
     ```
@@ -240,7 +240,7 @@ Do you need to display some date in a particular way? Ok, use D3.js' `utcFormat(
 
 Use the same identifier schemes, but convert a Date object into whatever available unit of the date info needed. Let's declare some parsers and a Date object to demo:
 
-```javascript
+```js
 // D3 Parsers
 const formatYear = utcFormat("%Y")
 const formatDayOfMonth = utcFormat("%d")
@@ -371,8 +371,16 @@ Here are some tips to consider as you complete this exercise.
 <p class="tip"><strong>Isolate interested parts of data</strong>: If dates are important to the inquiry, remember that the dates are stored as Strings in the following format: <code>"10/24/2024"</code>, i.e.,<code>"mm/dd/YYYY"</code>.</p>
 
 <!-- E1 -->
-```javascript
-// Convert and code here
+```js
+const parseDate = utcParse("%d/%m/%Y")
+
+let ballotsWithDateObjs = nc2024SampleVoters.map
+(voteDate => {
+let ballot_req_dt_obj = parseDate(voteDate.ballot_req_dt)
+return 
+}
+)
+
 ```
 
 ```javascript
@@ -386,7 +394,7 @@ ballotsWithDateObjs
 
 <!-- E2 -->
 ```javascript
-// Convert and code here
+let 
 ```
 
 ```javascript
