@@ -372,19 +372,20 @@ Here are some tips to consider as you complete this exercise.
 
 <!-- E1 -->
 ```js
+import {utcParse,utcFormat} from "d3-time-format"
 const parseDate = utcParse("%d/%m/%Y")
 
 let ballotsWithDateObjs = nc2024SampleVoters.map
-(voteDate => {
+(voteDate) => {
 let ballot_req_dt_obj = parseDate(voteDate.ballot_req_dt)
 return 
+voteDate,
+ballot_req_dt_obj
 }
-)
 
 ```
 
-```javascript
-// Convert and output
+```js
 ballotsWithDateObjs
 ```
 
