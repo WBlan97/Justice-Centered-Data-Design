@@ -398,10 +398,8 @@ let formatPrettyDate = utcFormat(%a, %b %d %Y)
 
 const updatedBallots = ballotsWithDateObjs.map((ballots) => {
 let updatedBallots = formatPrettyDate(ballotswithDateObjs.ballots_req_dt_obj)
-return {
-ballot_req_dt_obj,
-updatedBallots
-}})
+return {updatedBallots}
+})
 
 ```
 
