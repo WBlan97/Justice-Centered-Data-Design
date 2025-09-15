@@ -406,7 +406,7 @@ let nc2024SampleVotersUpdate = [
 This voter data has lots of dates, which we learned how to process and change with parsers and formatters from D3.js/Observable. Let's In the codeblock below with a new version of the data assigned to the variable `nc2024SampleVotersUpdate`.
 
 <!-- Rendered for...of nc2024SampleVotersUpdate -->
-```javascript
+```js
 for (const voter of nc2024SampleVotersUpdate) {
   // Create a Date object from the String value
   let voterReqDate = parseDateSlash(voter.ballot_req_dt)
@@ -762,7 +762,7 @@ Ok, Date() object behavior is one big reason to use InternMaps. Additionally, In
 
 For more proof, check out both of their respective `prototype` functions in the web console. Convert this `javascript` codeblock to an executable `js` codeblock and see for yourself:
 
-```javascript
+```js
 let ogJsMap = new Map()
 let d3InternMap = new InternMap()
 console.log(
@@ -959,12 +959,18 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
   Be sure to write your code in a manner aligned with how I break down the process above.
 </p>
 
-```javascript
-// Your code goes here
+```js
+let rtnRace = nc2024SampleVoters.map(
+  (voter) => {
+  const Status = myMap.get("ballot_rtn_status")
+  if Status != null{
+  return {race, ballot_rtn_status }
+}})
+
 ```
 
-```javascript
-// Your new variable here
+```js
+rtnRace
 ```
 
 ### E2. Group NC Voters By the Ballot Sent Date as an InternMap()
