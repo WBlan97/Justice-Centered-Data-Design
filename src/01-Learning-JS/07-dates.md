@@ -378,10 +378,11 @@ const parseDate = utcParse("%d/%m/%Y")
 let ballotsWithDateObjs = nc2024SampleVoters.map
 (voteDate) => {
 let ballot_req_dt_obj = parseDate(voteDate.ballot_req_dt)
-return 
+return {
 voteDate,
 ballot_req_dt_obj
 }
+
 
 ```
 
