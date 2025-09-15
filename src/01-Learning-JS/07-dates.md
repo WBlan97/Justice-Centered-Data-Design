@@ -397,10 +397,10 @@ import {utcParse,utcFormat} from "d3-time-format"
 let formatPrettyDate = utcFormat(%a, %b %d %Y)
 
 const updatedBallots = ballotsWithDateObjs.map((ballots) => {
-let ballot_req_dt_obj = formatPrettyDate(ballot_req_dt_obj.ballots)
+let updatedBallots = formatPrettyDate(ballotswithDateObjs.ballots_req_dt_obj)
 return {
-formatDate,
-ballot_req_dt_obj.ballots
+ballot_req_dt_obj,
+updatedBallots
 }})
 
 ```
@@ -409,7 +409,6 @@ ballot_req_dt_obj.ballots
 // Convert and output updatedBallots here
 updatedBallots
 ```
-nc2024SampleVoters.ballot_req_dt
 ## Submission
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
