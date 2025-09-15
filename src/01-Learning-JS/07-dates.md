@@ -376,13 +376,11 @@ import {utcParse,utcFormat} from "d3-time-format"
 const parseDate = utcParse("%d/%m/%Y")
 
 let ballotsWithDateObjs = nc2024SampleVoters.map
-(voteDate) => {
+((voteDate) => {
 let ballot_req_dt_obj = parseDate(voteDate.ballot_req_dt)
 return {
 voteDate,
-ballot_req_dt_obj
-}
-
+ballot_req_dt_obj}})
 
 ```
 
@@ -395,11 +393,19 @@ ballotsWithDateObjs
 **Goal**: Use `.map()` to loop through the updated array of objects, `ballotsWithDateObjs`, and create a new array of objects called `updatedBallots`. In the new `updatedBallots`, use `d3.utcFormat()` to assign a converted and formatted version of `ballot_req_dt_obj` with the following date ***format***: Wed., January 27, 1981.
 
 <!-- E2 -->
-```javascript
-let 
+```js
+import {utcParse,utcFormat} from "d3-time-format"
+
+const updatedBallots = ballotsWithDateObjs.map((updatedBallots) => {
+let ballot_req_dt_obj = utcFormat(%a, %b %d %Y)
+return {
+formatDate,
+ballot_req_dt_obj
+}})
+
 ```
 
-```javascript
+```js
 // Convert and output updatedBallots here
 updatedBallots
 ```
