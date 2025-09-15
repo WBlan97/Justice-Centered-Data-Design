@@ -372,12 +372,11 @@ Here are some tips to consider as you complete this exercise.
 
 <!-- E1 -->
 ```js
-import {utcParse,utcFormat} from "d3-time-format"
 const parseDate = utcParse("%d/%m/%Y")
 
 let ballotsWithDateObjs = nc2024SampleVoters.map
 ((voteDate) => {
-let ballot_req_dt_obj = parseDate(voteDate.ballot_req_dt)
+let ballot_req_dt_obj = parseDateSlash(nc2024SampleVoters.ballot_req_dt)
 return {
 voteDate,
 ballot_req_dt_obj}})
@@ -395,12 +394,13 @@ ballotsWithDateObjs
 <!-- E2 -->
 ```js
 import {utcParse,utcFormat} from "d3-time-format"
+let formatPrettyDate = utcFormat(%a, %b %d %Y)
 
-const updatedBallots = ballotsWithDateObjs.map((updatedBallots) => {
-let ballot_req_dt_obj = utcFormat(%a, %b %d %Y)
+const updatedBallots = ballotsWithDateObjs.map((ballots) => {
+let ballot_req_dt_obj = formatPrettyDate(ballot_req_dt_obj.ballots)
 return {
 formatDate,
-ballot_req_dt_obj
+ballot_req_dt_obj.ballots
 }})
 
 ```
@@ -409,7 +409,7 @@ ballot_req_dt_obj
 // Convert and output updatedBallots here
 updatedBallots
 ```
-
+nc2024SampleVoters.ballot_req_dt
 ## Submission
 
 1. Create a **PR** (**pull request**) and use the provided content in the template to start it.
