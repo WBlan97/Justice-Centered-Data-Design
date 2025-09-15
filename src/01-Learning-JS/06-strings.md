@@ -156,11 +156,14 @@ vonnegutNoSB
 ```
 
 ```js
-let vonnegutClean = vonnegutNoSB.replaceAll("\"", "").replaceAll("\'", "").replaceAll(",""").replaceAll(".", "").replaceAll("?", "").replaceAll(";", "").replaceAll("--", " ")
+let vonnegutClean = vonnegutNoSB.replaceAll(",", "").replaceAll("\"", "").replaceAll("\'", "").replaceAll(".", "").replaceAll("?", "").replaceAll(";", "").replaceAll("--", " ")
 ```
+
+vonnegutClean
+
 ```js
-vonnegutNoSB
-``
+vonnegutClean
+```
 
 ### E3. Same thing, but better method with a for loop
 
@@ -170,12 +173,17 @@ Ok, those chains were ridiculous, right? Below, complete the same outcome, but u
   Put those desired marks to replace in an Array. You will also need to write a conditional statement to handle the <code>--</code> differently.
 </p>
 
-```javascript
-// Convert me and use a for loop to remove all desired punctuation
+```js
+let vonnegutArray = [",","\"","\'",".","?",]
+
+let vonnegutNoPuncs = for (p of vonnegutNoSB){
+if (p == vonnegutArray, --) 
+vonnegutNoSB.replaceall("")
+}
 ```
 
-```javascript
-// Convert me and output the new string, vonnegutNoPuncs, here
+```js
+vonnegutNoPuncs
 ```
 
 ### E4. Split the String into an Array of Strings
