@@ -174,7 +174,7 @@ Ok, those chains were ridiculous, right? Below, complete the same outcome, but u
 </p>
 
 ```js
-let vonnegutArray = [",","\"","\'",".","?",]
+let vonnegutArray = [",","\"","\'",".","?",";", ]
 
 let vonnegutNoPuncs = for (p of vonnegutNoSB){
 if (p == vonnegutArray, --) 
