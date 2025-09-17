@@ -398,12 +398,12 @@ ballotsWithDateObjs
 
 <!-- E2 -->
 ```js
-const formatPrettyDayOfWeek = d3.utcFormat("%a, %m %d %Y")
+const formatPrettyDayOfWeek = d3.utcFormat("%a., %m %d, %Y")
 console.log(ballotsWithDateObjs)
 
 const updatedBallots = ballotsWithDateObjs.map(
   (ballot) => {
-    ballot.new_prop_name_here = formatPrettyDayOfWeek(ballot.ballot_req_dt_obj)
+    ballot.formattedDates = formatPrettyDayOfWeek(ballot.ballot_req_dt_obj)
     return ballot
   }
 )
@@ -411,7 +411,7 @@ const updatedBallots = ballotsWithDateObjs.map(
 ```
 
 ```js
-updatedBallots
+// updatedBallots
 ```
 ## Submission
 
