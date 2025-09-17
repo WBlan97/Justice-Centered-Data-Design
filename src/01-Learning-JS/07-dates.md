@@ -240,7 +240,7 @@ Do you need to display some date in a particular way? Ok, use D3.js' `utcFormat(
 
 Use the same identifier schemes, but convert a Date object into whatever available unit of the date info needed. Let's declare some parsers and a Date object to demo:
 
-```js
+```javascript
 // D3 Parsers
 const formatYear = utcFormat("%Y")
 const formatDayOfMonth = utcFormat("%d")
@@ -372,7 +372,6 @@ Here are some tips to consider as you complete this exercise.
 
 <!-- E1 -->
 ```js
-const parseDate = utcParse("%d/%m/%Y")
 
 let ballotsWithDateObjs = nc2024SampleVoters.map
 ((voteDate) => {
@@ -393,18 +392,15 @@ ballotsWithDateObjs
 
 <!-- E2 -->
 ```js
-import {utcParse,utcFormat} from "d3-time-format"
-let formatPrettyDate = utcFormat(%a, %b %d %Y)
+const formatPrettyDate = utcFormat(%a, %b %d %Y)
 
-const updatedBallots = ballotsWithDateObjs.map((ballots) => {
-let updatedBallots = formatPrettyDate(ballotswithDateObjs.ballots_req_dt_obj)
-return {updatedBallots}
-})
+const updatedBallots = ballotsWithDateObjs.map((ballots => {
+let ballot_req_dt_obj = formatPrettyDate(ballots.ballots_req_dt_obj)
+}))
 
 ```
 
 ```js
-// Convert and output updatedBallots here
 updatedBallots
 ```
 ## Submission
