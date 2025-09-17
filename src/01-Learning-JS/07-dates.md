@@ -373,11 +373,18 @@ Here are some tips to consider as you complete this exercise.
 <!-- E1 -->
 ```js
 const parseDateSlash = utcParse("%m/%d/%Y")
-let ballotsWithDateObjs = nc2024SampleVoters.map
-((voteDate) => {
-let ballot_req_dt_obj = Date(parseDateSlash(nc2024SampleVoters.ballot_req_dt))
-return {
-ballot_req_dt_obj}})
+let ballotsWithDateObjs = nc2024SampleVoters.map(
+  (ballot) => {
+    ballot.ballot_req_dt_obj = parseDateSlash(ballot.ballot_req_dt)
+    return ballot
+  }
+)
+  // (ballot) => {
+  //   console.log(nc2024SampleVoters)
+  //   let ballot_req_dt_obj = parseDateSlash(nc2024SampleVoters.ballot_req_dt)
+  //   return ballot_req_dt_obj
+  // }
+// )
 
 ```
 
@@ -391,11 +398,14 @@ ballotsWithDateObjs
 
 <!-- E2 -->
 ```js
-const formatPrettyDate = d3.utcFormat("%a %m %d %Y") 
+const formatPrettyDayOfWeek = d3.utcFormat("%a, %m %d %Y")
+console.log(ballotsWithDateObjs)
 
-const updatedBallots = ballotsWithDateObjs.map((ballots) => {
-let ballot_req_dt_obj = formatPrettyDate(ballotsWithDateObjs.ballot_req_dt_obj)
-return {ballot_req_dt_obj}}
+const updatedBallots = ballotsWithDateObjs.map(
+  (ballot) => {
+    ballot.new_prop_name_here = formatPrettyDayOfWeek(ballot.ballot_req_dt_obj)
+    return ballot
+  }
 )
 
 ```
