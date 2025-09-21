@@ -44,6 +44,7 @@ With these goals for the texts in mind, please respond to the questions herein a
 **Question**: Use the space below to define the provided key terms.
 
 - According to the SFSJ authors, what are the main difference between **data** and **information**?:
+
 - **Variable**:
 - **Constant**:
 - **Conceptualization**:
@@ -57,13 +58,27 @@ With these goals for the texts in mind, please respond to the questions herein a
 
 **Question**: Describe how the S4SJ authors define and use the term **positivism**. How do they suggest it is different from **post-positivism**? According to the authors, why are both paradigms important to social workers? Now, how do you imagine it is important for TPC professionals?
 
-Your_response_here
+They define **positivism** as a "research paradigm that holds that social behaviour can be studied and understood in a rational, objective and scientific manner," and suggest that it is different from post-positivism in terms of it's relationship to the subject, or in this case the *client*. In the post-positivist, or "intrepretist" approach, scientific methods are seen as limiting the voices that can contribute to the formulation of knowledge. For these reasons, they suggest that quanitative methods generally accompany a positivist approach and qualitative an interpretist one.
+
+They suggest that both paradigms are important to social workers because they both should be employed in order to enact an overarching goal—— in this case, promoting social justice. Similar considerations are important for TPC professionals. Because our work is inherently a healthy combination of both approaches, it is that much more important that we don't get wrapped up in either but instead keep the goal of communicating information effectively and efficiently at the forefront of our mind. 
 
 ### 1.3. On the "*structural perspective*"
 
 **Question**: Name and define the different parts of the ***structural perspective***. Be sure to cover the parts related practice and research.
 
-Your_response_here
+1. The **Order Perspetive**, which holds that society operates in an orderly manner.
+
+2. The **Conflict Perspective**, which argues that the more power a group accumulates the more it is able to wield its own power and pursue its own interests, possibly oppressing others through coercion and subjugation in the process.
+ 
+The five practice methods listed are.
+
+1. Defence of the client- The way social workers use the structural perspective to help defend their clients against an oppressive system.
+2. Collectivization- The connecting of clients to relevant support and social networks to mitigate isolation and alienation.
+3. Materialization- The materialist analysis social workers employ to let patients know they are not to blame for the issues they are experiencing.
+4. Increasing Client Power in the Worker-Client Relationship- Allowing clients into the worker-client relationship through sharing notes and minimizing jargon to return agency.
+5. Enhancing Client Power Through Personal Change- Focusing on clients' strengths and helping them make the connection between their thoughts/behaviors and social context to maximize client's potential.
+
+
 
 ## 2. Questions about "The history of empiricism"
 
