@@ -44,15 +44,24 @@ With these goals for the texts in mind, please respond to the questions herein a
 **Question**: Use the space below to define the provided key terms.
 
 - According to the SFSJ authors, what are the main difference between **data** and **information**?:
+Data refers to the results of measurements, in this case possibly a questionnare or some other related methadology. **Information** is the result of analyzing the data. The main difference between the two is that information involves a type of analysis, while data is generally raw statistics. 
 
 - **Variable**:
+A characteristic that varies.
 - **Constant**:
+A characteristic that is the same for the people or objects that are the focus of the research.
 - **Conceptualization**:
+The process of choosing and clearly defining variables to be included in a study.
 - **Operationalization**:
+The method which is used to measure variables.
 - **Nominal level of data**:
+The classification of observations into mutually exclusive categories with no order or rank.
 - **Ordinal level of data**:
+The classification of observations into mutually exclusive categories with an order or rank.
 - **Interval level of data**:
+The classification of observations that are mutually exclusive, have an inherent order and have equal spacing between categories
 - **Ratio level of data**:
+The classification of observations that are mutually exclusive, have an inherent order, have equal spacing and reflect an absolute magnitude.
 
 ### 1.2. On positivism
 
@@ -86,7 +95,9 @@ The five practice methods listed are.
 
 **Question**: According to the SFSJ authors, what is ***feminist empiricism***? And, what issues does it recognize as important to recognize and remedy? Be sure to discuss why it emphasizes the importance of critically reflecting on aspects of the ***context*** of empirical work.
 
-Your_response_here
+Feminist empiricism upholds many of the tenets of traditional empiricism, including that only knowledge premised on direct observation can be held as fact and that science is about formulating hypotheses to be tested against experience.
+
+The primary difference is that it suggests that science is not *value free* and that the scientific method is not sufficient to screen out judgement values and personal prejudices. For these reasons, it is important that those engaged in scientific research consider contextual factor outside of those only contained in the scientifc method. 
 
 ## 3. Questions About "The future of ethics and social justice" in TPC
 
