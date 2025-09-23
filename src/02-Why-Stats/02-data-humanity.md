@@ -49,7 +49,43 @@ All PDF copies are available in our learning management system.
 
 **Question**: According to D'Ignazio and Klein, what principles concern data and "power"? Define and discuss each principle below. Be sure to note the important questions to ask about data and power.
 
-YOUR_RESPONSE_HERE
+1. Examine Power
+The first principle of data feminism relates to how the current configuration of structural privelege and structural oppression benefits some disproportionately, specifically those who designed these systems with their own self-interest in mind. Examining power is the analysis of these structures and how they operate.
+
+Data feminism, specifically, asks three questions about power in data science: Data Science for whom? Data Science by whom? Data science with whose interests and goals in mind?
+2. Challenge Power
+Challenging power refers to rebalancing and fighting against these hierarchies and unequal distributions of power.  One such method is using counterdata. 
+
+In terms of the pandemic, the CDC neglected to take sex-aggregated data, and two relevant questions might be: Why are men dying at higher rates? Are pregnant people more at risk?
+
+3. Elevate Emotion and embodiment
+Elevating emotion and embodiment, with respect to data, refers to challenging the notion that data communication should always be neutral, rational, and emotionally detached. 
+
+This idea brings us back to the purpose of gathering data and performing analysis in the first place. In the context of Covid-19 and a massive loss of lives, why woud responsible data science not be emotional?
+
+4. Rethink binaries and hierarchies
+Rethinking binaries leads us to examine the "man" and "woman" categorization our culture has constructed, specifically the power it bestows to the "man" in this dichotomy.
+
+One important question to ask here would be how might trans and gender noncorming people fit into datasets premised on this binary? Are they to not be accounted for at all? 
+
+5. Embrace Pluralism
+This perspective considers embracing and synthesizing multiple perspectives, which allows us to get better and more accurate knowledge.
+
+An important consideration for data science might be: Are the findings and products we are creating benefitting multiple groups equally?
+
+The authors bring up digital contact tracing apps as an example of how the might not.
+
+6. Consider Context
+Context refers to how data, thought it may look uniform, can often fail to take thing like socioeconomic and living conditions into account.
+
+A relevant question might be: what are the factors that have led to this result, and how might they have influced this finding?
+
+7. Make Labor Visible
+This refers to the way in which data feminism makes labor visible.
+
+In the context of coronavirus, a very relevant question might be: how are essential workers being compensated and value for the important and life-threatening work they are engaging?
+
+
 
 ### 1.2 Data: Objective mirror, or not?
 
