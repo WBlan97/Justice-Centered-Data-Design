@@ -105,33 +105,38 @@ The primary difference is that it suggests that science is not *value free* and 
 
 **Question**: Name and define some of what you deem as the main different parts of the ***socially just ethic***. Be sure to discuss how it is different from other ethical approaches.
 
-Your_response_here
+**Socially just ethics** or SJ ethics incorporates theories from many different fields, including feminism and gender studies, race and ethnicity studies, intercultrual communication, community and public engagement, disability studies, and user advocacy. 
+
+It differs from traditional Western ethical philosophies in two main way. First, it shifts ethics from an individualistic pursuit of intuiting *good* moral behavior to a collectivist act that focuses on coalition building that advocated for collective action. Second, it centers social justice as a particular set of values and practices to become advocates for the oppressed.
 
 ### 3.2. Defining critical issues
 
 **Question**: Briefly define each of the critical issues discussed: Cultural Imperialism, Marginalization, and Intersectional Oppression.
 
-**Cultural Imperialism**: Your_response_here
+**Cultural Imperialism**: The violent stealing of land, exploitation of land, and forced cultural assimilation for the benefit of white-European colonizers.
 
-**Marginalization**: Your_response_here
+**Marginalization**: The exclusion of particular groups from meaningful participation in society.
 
-**Intersectional Oppression**: Your_response_here
+**Intersectional Oppression**: The systematic degredation of marginalized groups through racism, sexism, and other connected forms of oppression.
 
 ### 3.3. Defining the 3Ps to help us recognize oppression
 
 **Question**: Define each of the 3Ps below. Explain how each helps us recognize oppression.
 
-**Power**: Your_response_here
+**Power**: A sctructural oppressive social orginization which can be understood through the matrix of of domination, or four relevant domains.
+1. Structural power, which addresses how institutions benefit from their capacity to reorganize social and and technical relationships. 
+2. Disciplinary power, which asks questions about how hegemonies manage and control their power relations.
+3. Interpersonal power, which asks questions about how everyday interactions support the construction of institutional power structures.
 
-**Privilege**: Your_response_here
+**Privilege**: The constraints and affordances afforded to individuals based on their positionality.
 
-**Positionality**: Your_response_here
+**Positionality**: The concept which allows individuals and groups to reflect on their identity in the context of structural issues of oppression. 
 
 ### 3.4. Why an SJ ethic?
 
 **Question**: Why do Lindgren, Gerdes, and Lawrence position a "SJ ethic" as essential to the future of TPC? What types of problems does it help TPC tackle?
 
-Your_response_here
+The authors position the SJ ethic as essential to the future of TPC because it will help center the need of marginalized and oppressed voices and follow their lead to redress intersectional concerns. More specifically, it will enable community engagements, expand who and what counts as tpc experts/leaders, and provide for decolonization within the field.
 
 ## 4. Questions About "Statistical Genre Analysis" (SGA)
 
@@ -139,30 +144,39 @@ Your_response_here
 
 **Question**: How do Graham et al define and discuss what constitutes "big" data? How does their definition differ from what you have heard before you read this article?
 
-Your_response_here
+They define big data as data which requires methods that extend beyond qualitative and inductive reportoires. They posit that large datasets are now not a defining quality of big data, but rather the capacity to search, aggregate, and parse through datasets. This differs from my prior conception of big data, which I thought refered exclusively to work done in data centers, or large technological hubs. 
 
 ### 4.2. On SGA
 
 **Question**: Summarize the following parts of SGA:
 
 1. What TPC problems SGA addresses,
+SGA enables TPC professionals and scholars to combine humanistic and qualitative modes of discoursce with statistical ones. It allows for the technical communicators to move towards the offering conclusions about large datasets without losing the craft character of rhetorical inquiry.
 2. What data they used to demonstrate its potential,
+They use the FDA's Drug Advisory Committees, which is 5,000 page subset containg over 70,000 data points.
 3. What questions SGA data and methods enable TPC to ask, and
+SGA data and methods allows TPC to ask questions about inclusion and representation in science, technology, engineering, and math, more specifically the inclusion of marginalized voices in "nonexpert" classes.
 4. What methods it uses to do so.
-
-Your_response_here
+SGA combines various statistical analysis methods and tests with qualitative methods, which could be things like coding schema development, directed content analysis, or meeting data and participant demographic extraction. It is a mixed-method hybridization of both techniques.
 
 ## 5. "Science is a social endeavor."
 
 **Question**: Discuss what this statement means to you. Then, discuss any connections, confusion, and/or questions that you recognize with a SJ ethic and structural perspective?
 
-Your_response_here
+Science should be used for social aims and to build connectivity within social groups. It should be transmissable, clear, and serve the needs of many, rather than overly abstruse or esoteric. 
+
+This view is directly related to both an SJ ethic and structural perspective. More specifically, it takes the role of the conflict perspective, in that science should not be wielded by one group to gain overt power over another. Rather, it should upholds the tenets of an sj ethic and center the voices of oppressed or margninalized communities and people.
 
 ## 6. Translating the structural approach into TPC / Other Humanities Fields
 
 **Question**: After considering all of these texts -- their exigencies, propositions, and methods -- translate Mullaly's broader definition of the *structural approach* and Moreau's *practice methods* in social work into the domain of TPC or humanist domain of work by putting them into conversation with Lindgren, Gerdes, and Lawrence's SJ ethic and Graham et al's statistical genre analysis. In other words, begin to develop your own structural perspective and set of practices that translates Moreau's 5 practices. Finally, add one new practice approach specific to TPC/your domain.
 
-Your_response_here
+
+I think the practice methods put forth by Moreau translate well into the field of TPC, and also form as a sounds confluence of SJ ethics, SGA, and a structural approach. I am thinking about defence of the client in the context of user advocacy. As such that users should be protected from biased systems or unfair algorithsm. Collectivization in that readers and users should have multiple paths and channels available to mitigate errors and issues they might face.
+
+Materialization I am thinking of in the context of technological training and paid vs. open-source or free technologies, plus the resources which have been provided to users prior to accessing your document. Client power brings to mind user input, and the exigency of allowing those accessing your materials to provide feedback. Personal change makes me think of the importance of crafting materials that keep your targeted audiences strengths in mind.
+
+I would add preserving clients or user's authentic voice as a practice method. In that their input should be considered separate and distinctive from yours and needs to be considered as such.
 
 ## Submission
 
