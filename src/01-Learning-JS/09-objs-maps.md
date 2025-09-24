@@ -962,9 +962,9 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
 ```js
 let rtnRace = nc2024SampleVoters.map(
   (voter) => {
-  const Status = myMap.get("ballot_rtn_status")
-  if Status != null{
-  return {race, ballot_rtn_status }
+  const status = myMap.get("ballot_rtn_status")
+  if (status != null){
+  return {race, ballot_rtn_status}
 }})
 
 ```
