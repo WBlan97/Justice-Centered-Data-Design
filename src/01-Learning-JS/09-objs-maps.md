@@ -256,7 +256,7 @@ Easy review here. Use the index position to access each object literal in the Ar
 **The output:**
 
 ```js
-nc2024VoterInfo[0]
+nc2024VoterInfo[0].demographics
 nc2024VoterInfo[1]
 nc2024VoterInfo[2]
 ```
@@ -901,7 +901,7 @@ Sometimes you just need to compute some values about your data, rather than pres
 `d3.rollup` first groups the data—just like `.group()`. Yet, `rollup` then **reduces** the specified iterable of values into an InternMap from the provided key to reduced value. For example, let's say we just want to count the number of voters in a particular group? Rollup to the rescue!
 
 <!-- Render party>gender rollup -->
-```javascript
+```js
 let nc24VotersRollUpPartyAndRace = d3.rollup(
   // Input array of objects
   nc2024SampledVoters,
@@ -915,7 +915,7 @@ let nc24VotersRollUpPartyAndRace = d3.rollup(
 
 <!-- Assign party>gender rollup -->
 ```js
-let nc24VotersRollUpPartyAndRace = d3.rollup(
+let nc24VotersRollUpPartyAndRacenew = d3.rollup(
   nc2024SampledVoters,
   (D) => D.length,
   (d) => d.ballot_request_party,
@@ -929,7 +929,7 @@ let nc24VotersRollUpPartyAndRace = d3.rollup(
 
 <!-- Interactive output -->
 ```js
-nc24VotersRollUpPartyAndRace
+nc24VotersRollUpPartyAndRacenew
 ```
 
 #### .get() rolled up InternMap data
