@@ -936,7 +936,7 @@ nc24VotersRollUpPartyAndRacenew
 
 Here's how to get the count of absentee voters whose party is `"DEM"` and whose gender is `"F"`:
 
-```javascript
+```javascrip
 nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
 ```
 
@@ -960,17 +960,23 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
 </p>
 
 ```js
-let rtnRace = nc2024SampleVoters.map(
-  (voter) => {
-  const status = myMap.get("ballot_rtn_status")
-  if (status != null){
-  return {race, ballot_rtn_status}
-}})
+const voterRaceAndStatus = nc2024SampleVoters.map(voter =>{
+if(voter.ballot_rtn_status !== null){
+return{
+ballot_rtn_status: voter.ballot_rtn_status,
+race: voter.race
+}
+}
+})
+
+
+//const status = myMap.get(voter."ballot_rtn_status")
+//  if (status != null){
 
 ```
 
 ```js
-rtnRace
+voterRaceAndStatus
 ```
 
 ### E2. Group NC Voters By the Ballot Sent Date as an InternMap()
