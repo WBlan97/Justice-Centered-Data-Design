@@ -960,11 +960,12 @@ nc24VotersRollUpPartyAndRace.get("DEM").get("F") // Yields 4149
 </p>
 
 ```js
-const voterRaceAndStatus = nc2024SampledVoters.map(voter =>{
+const voterRaceAndStatus = nc2024SampleVoters.map(voter =>{
 if(voter.ballot_rtn_status !== null){
 return{
 ballot_rtn_status: voter.ballot_rtn_status,
-race: voter.race}
+race: voter.race
+}
 }
 })
 
@@ -994,20 +995,18 @@ voterRaceAndStatus
 ```js
 const parseDateSlash = d3.utcParse("%m/%d/%Y")
 
-let ballot_send_dt_obj = nc2024SampledVoters.map((ballot) => {
-  ballot.ballot_send_dt_obj = parseDateSlash(ballot.ballot_send_dt)
-  return ballot
-})
+let ballot_send_dt_obj = nc2024SampleVoters.map((ballot) => {
+  ballot.ballot_send_dt_obj = parseDateSlash(ballot.ballot_send_dt);
+  return ballot;
+});
 
-let newInternMap = d3.group(nc2024SampledVoters, (d) => d.ballot_send_dt_obj);
+let newInternMap = d3.group(nc2024SampleVoters, (d) => d.ballot_send_dt_obj);
 
 ```
 
 ```js
 
 newInternMap
-
-
 ```
 
 
@@ -1028,26 +1027,15 @@ newInternMap
 </div>
 
 ```javascript
-<<<<<<< Updated upstream
 let ageLimits = [30, 40, 50, 60, 70, 80, 90, 100]
+
+
 if
 else if 
 else if
 else if
 else if
 else if
-=======
-ageLimits = [30, 40, 50, 60, 70, 80, 90, 100]
-
-
-for (range of ageLimits){
-  if ageLimits.range > ageLimits[0]
-}
-
-
-nc2024SampleVoters.age
-
->>>>>>> Stashed changes
 ```
 
 ```javascript
@@ -1059,7 +1047,6 @@ nc2024SampleVoters.age
 
 First outline your procedure with steps below. Then, use the JS codeblock to perform your grouping as a D3.js `InternMap()`.
 
-<<<<<<< Updated upstream
 1. Declare a new variable grouping party, race, and age of voters.
 2. Output variabe in second codeblock.
 3. ...
@@ -1074,18 +1061,6 @@ const ncVotersByPartyRaceAge = d3.group(nc2024SampledVoters,
 
 ```js
 ncVotersByPartyRaceAge
-=======
-1. Declare cityRaceParty as new grouping of voter_city, race, and ballot_request_party.
-2. Output 
-3. ...
-
-```js
-let cityRaceParty = d3.group(nc2024SampledVoters, (d) => d.voter_city, d=> d.race, d=> d.ballot_request_pary)
-```
-
-```js
-cityRaceParty
->>>>>>> Stashed changes
 ```
 
 ### E5. Rollup NC Voters by Total Ballot Sent Date as an InternMap()
@@ -1099,14 +1074,11 @@ First outline your procedure with steps below. Then, use the JS codeblock to per
 3. ...
 
 ```javascript
-
-
-ncVotersRollup = d3.rollup(nc2024SampleVoters, d=> d.length d=> d.ballot
-)
+// Your code goes here
 ```
 
-```js
-
+```javascript
+// Your grouped variable here
 ```
 
 ## Submission
