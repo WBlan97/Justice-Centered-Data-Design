@@ -1027,11 +1027,16 @@ newInternMap
 </div>
 
 ```javascript
-// Your code goes here
+let ageLimits = [30, 40, 50, 60, 70, 80, 90, 100]
+if
+else if 
+else if
+else if
+else if
+else if
 ```
 
 ```javascript
-// Your grouped variable here
 ```
 
 ### E4. Group NC Voters by Your Desired set of 2-3 Fields as an InternMap()
@@ -1040,16 +1045,20 @@ newInternMap
 
 First outline your procedure with steps below. Then, use the JS codeblock to perform your grouping as a D3.js `InternMap()`.
 
-1. Enter step 1
-2. Enter step 2
+1. Declare a new variable grouping party, race, and age of voters.
+2. Output variabe in second codeblock.
 3. ...
 
-```javascript
-// Your code goes here
+```js
+const ncVotersByPartyRaceAge = d3.group(nc2024SampledVoters,
+(d) => d.ballot_request_party,
+(d) => d.race,
+(d) => d.age
+)
 ```
 
-```javascript
-// Your grouped variable here
+```js
+ncVotersByPartyRaceAge
 ```
 
 ### E5. Rollup NC Voters by Total Ballot Sent Date as an InternMap()
