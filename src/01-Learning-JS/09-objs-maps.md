@@ -996,7 +996,7 @@ voterRaceAndStatus
 const parseDateSlash = d3.utcParse("%m/%d/%Y")
 
 let ballot_send_dt_obj = nc2024SampleVoters.map((ballot) => {
-  ballot = parseDateSlash(ballot.ballot_send_dt);
+  ballot.ballot_send_dt_obj = parseDateSlash(ballot.ballot_send_dt);
   return ballot;
 });
 
@@ -1005,6 +1005,7 @@ let newInternMap = d3.group(nc2024SampleVoters, (d) => d.ballot_send_dt_obj);
 ```
 
 ```js
+
 newInternMap
 ```
 
