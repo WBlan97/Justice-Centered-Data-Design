@@ -993,7 +993,10 @@ voterRaceAndStatus
 </p>
 
 ```javascript
-// Your code goes here
+InternMap(nc2024SampleVoters =>
+let ballot_send_dt_obj = ()
+nc2024Sample Voters
+
 ```
 
 ```javascript
