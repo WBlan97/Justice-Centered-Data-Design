@@ -1,4 +1,4 @@
-# Title for the page
+# Wyatt Blanchette Midterm
 
 - Unordered list of the following information:
 - **Name**: Your first and last name
