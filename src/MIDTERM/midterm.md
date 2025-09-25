@@ -1,34 +1,33 @@
 # Wyatt Blanchette Midterm
 
 - Unordered list of the following information:
-- **Name**: Your first and last name
-- **Dataset**: Filename of the chosen dataset
+- Wyatt Blanchette
+- meta-ads-mentioning-israel-after-2015-09-11.csv
 
 ## Overview
 
-Paragraph 1: Briefly explain your reasons for choosing the specific dataset,
-which can include any discussion about the topic and particular variables.
+I chose this dataset for a few reasons. I have been heavily invested in the Israel Palestine October 7th conflict and its continued ramifications these last few years. I also have been aware of Israel's media spending for a while now, specifically as it relates to targets ads concerning birthright, promoting statewide propaganga, the IDF, and distorted truths surrounding their relations with Palestine, Gaza, and other contested areas. I also remember reading a few years about about the amount of ads meta specifically has hosted throughout the years promoting Israeli policies.
 
-The following given executable js codeblock that imports the one set of D3.js
-modules that you will need to use for Date() object work. You will need to
-remove the forward-slashes preceeding the backticks, since I needed to
-eascape these characters within this block.
+This dataset specifically contains some really interesting values, including currensy or spend, min and max impressions, as well as a link to the original ad. The fact that it contains so many years could also prove to be a strong way to filter the data.
 
-\`\`\`js
+
+
+```js
 import {utcParse,utcFormat} from "d3-time-format";
-\`\`\`
+```
 
 Then, divide the notebook into meaningfully sections and subsections.
 Use the following general scheme to revise as needed.
 
 ## Attach the data
 
-In this section, be sure to make some small notes about the data and output it
-in an executable js codeblock, so you can review it on the page interactively.
-You can note its size, for instance, as well as any other notable insights
-gleaned during your first glance.
+```js
+const israelAds = FileAttachment("./../data/midterm-options/meta-ads/meta-ads-mentioning-israel-after-2015-09-11.csv").csv({typed: true})
+```
 
-Remember that this is a notebook, so you can treat it like one. `:-)`
+```js
+israelAds
+```
 
 ## Convert Dates
 
