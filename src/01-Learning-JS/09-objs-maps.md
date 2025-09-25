@@ -992,16 +992,22 @@ voterRaceAndStatus
   Be sure to write your code in a manner aligned with how I break down the process above.
 </p>
 
-```javascript
-InternMap(nc2024SampleVoters =>
-let ballot_send_dt_obj = ()
-nc2024Sample Voters
+```js
+const parseDateSlash = d3.utcParse("%m/%d/%Y")
+
+let ballot_send_dt_obj = nc2024SampleVoters.map((ballot) => {
+  ballot = parseDateSlash(ballot.ballot_send_dt);
+  return ballot;
+});
+
+let newInternMap = d3.group(nc2024SampleVoters, (d) => d.ballot_send_dt_obj);
 
 ```
 
-```javascript
-// Your grouped variable here
+```js
+newInternMap
 ```
+
 
 ### E3. Group NC Voters By Age Range as an InternMap()
 
