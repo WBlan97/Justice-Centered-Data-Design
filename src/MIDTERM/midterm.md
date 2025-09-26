@@ -31,12 +31,22 @@ israelAds
 
 ## Convert Dates
 
-Convert the dates, which are strings, into Date() objects with your own custom
-D3.js parser and any formatters. Discuss any particular choices to format the
-date data in any new ways.
+```js
+const parseDate = utcParse("%Y-%m-%d")
 
-Again, be sure to output your newly transformed data in executable codeblocks
-for easier verification and reviewing.
+let adsDateObj = israelAds.map(
+  (ads) => {
+    ads.ad_creation_time = parseDate(ads.ad_creation_time)
+    return ads
+  }
+)
+
+```
+
+```js
+adsDateObj
+```
+
 
 ## Grouping #1 - Name of grouping here
 
@@ -50,24 +60,43 @@ Provide a procedure of your grouping plan in an ordered list before the codebloc
 2. Coding_Action_2
 3. ...
 
-Again, be sure to output your newly transformed data in executable codeblocks
-for easier verification and reviewing.
+```js
+
+```
 
 ## Grouping #2 - Name of grouping here
 
-Explain your plan to group the data in a particular way here, before you do so.
-At least one of the groupings should use some variation of D3's `.rollup()`, so
-you can count particular grouped properties.
+For the grouping, I paired max_spend and max_impressions. The idea here is to investigate how increased spend may have generated more impressions. 
 
-Provide a procedure of your grouping plan in an ordered list before the codeblock:
+For the second, I also investigated impressions, however this time with minimum spend. 
 
-1. Coding_Action_1
-2. Coding_Action_2
-3. ...
 
-Again, be sure to output your newly transformed data in executable codeblocks
-for easier verification and reviewing.
+1. Grouped max spend and impressions using d3 group.
+2. Grouped impression with min spend using d3 rollup to get the count.
+3. Output first grouped variable, spendImpressions.
+4. Output second grouped variable, minSpendImpressions.
 
+```js
+let spendImpressions = d3.group(
+  israelAds,
+  (d) => d.max_spend,
+  (d) => d.max_impressions
+)
+
+let minSpendImpressions = d3.rollup(
+  israelAds,
+  (D) => D.length,
+  (d) => d.min_spend,
+    (d) => d.max_impressions
+)
+```
+```js
+spendImpressions
+```
+
+```js
+minSpendImpressions
+```
 ## Reflection
 
 Use the following prompt to guide your reflection about your data work:
