@@ -914,7 +914,7 @@ let nc24VotersRollUpPartyAndRace = d3.rollup(
 let nc24VotersRollUpPartyAndRace = d3.rollup(
   nc2024SampledVoters,
   (D) => D.length,
-  (d) => d.ballot_request_party,
+  (d) => d.currense,
     (d) => d.gender
 )
 ```
