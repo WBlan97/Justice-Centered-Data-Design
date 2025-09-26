@@ -50,18 +50,25 @@ adsDateObj
 
 ## Grouping #1 - Name of grouping here
 
-Explain your plan to group the data in a particular way here, before you do so.
-At least one of the groupings should use some variation of D3's `.rollup()`, so
-you can count particular grouped properties.
+For my first grouping, I chose page name and the orginal currency used to fund the ads. The idea is to try and get a sense of some kind of relationship between page title and its funding/country of origin. In a preliminary glance at the array, I find it interesting how many ads were actually funded by two or more countries.
 
 Provide a procedure of your grouping plan in an ordered list before the codeblock:
 
-1. Coding_Action_1
-2. Coding_Action_2
-3. ...
+1. Grouped page_name and currency.
+2. Used d3 rollup to get the count.
+3. Output in second codeblock.
 
 ```js
+let pageCurrency = d3.rollup(
+  israelAds,
+  (D) => D.length,
+  (d) => d.page_name,
+    (d) => d.currency_original
+)
+```
 
+```js
+pageCurrency
 ```
 
 ## Grouping #2 - Name of grouping here
