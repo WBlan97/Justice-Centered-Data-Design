@@ -94,18 +94,18 @@ Ok, that's easy, but that's way too much data for a table!
 Let's create a new table below that reduces what we want to see by implementing the following options within a second parameter, which is an object `{...}` with the following properties:
 
 - `columns`: Reduce the 17 columns to the following seven columns. Remember that you can access them via `data.columns`.
-    ```js
+    ```javascript
     columns: [
       "id_num", "county_desc", "race", "gender", "age",
       "ballot_request_party", "ballot_rtn_status"
     ]
     ```
 - `rows`: Default is 11.5. Let's change it to 25:
-    ```js
+    ```javascript
     rows: 25
     ```
 - `width`: Since some values in the table are short in length than others, let's define specific column widths. We can use an object where each provided column name is a key and value the desired width in pixels (px):
-    ```js
+    ```javascript
     width: {
       id_num: 20,
       county_desc: 90,
@@ -116,7 +116,7 @@ Let's create a new table below that reduces what we want to see by implementing 
     }
     ```
 - `header`: We can also rename the column names in the header. Use the desired original column names as keys in an object, where the values are new Strings to rename that column:
-    ```js
+    ```javascript
     header: {
       id_num: "ID",
       county_desc: "County",
@@ -135,6 +135,10 @@ Ok, now I want you to put all of those pieces together in your own `Inputs.table
 ```javascript
 // Insert your table here
 Inputs.table(
+  ncVotersAll{
+    columns: [race: "Race", gender: "Gender"],
+    rows:
+  }
   // The array of objects
   ncVotersAll,
   {
@@ -254,7 +258,7 @@ Ok, so we want to create a desired ***grouping*** of `ballot_rtn_status` > `race
     2. Add second param: the computation to perform on the rolled up data. In this case, we want the absolute frequency of ballot statuses per race.
 
 <!-- Example rollups() -->
-```javascript
+```js
 /**
  * .rollups()
  * @return: a flattened version of InternMap:
@@ -273,7 +277,7 @@ const afStatusByRace = d3.rollups(
 </p>
 
 <!-- afStatusByRace output -->
-```javascript
+```js
 // Convert to render on page
 afStatusByRace
 ```
@@ -358,9 +362,9 @@ In this second video, I explain the code inside of the custom `oneLevelRollUpFla
 
 Ok, now that you have watched the above video about the `oneLevelRollUpFlatMap()` function. Import it from the `./utils/utils.js` file in the codeblock below.
 
-```javascript
+```js
 // Convert me and import oneLevelRollUpFlatMap()
-import {PUT_ANY_FUNCTIONS_IN_HERE, SEPARATE_MORE_THAN_ONE, WITH_COMMAS} from "enter/path/here.js"
+import {oneLevelRollUpFlatMap} from "./utils/utils.js"
 
 ```
 
@@ -368,15 +372,20 @@ Now, see if it worked!
 
 Use the imported function in the below codeblock to rollup and flatten `ncVotersAll` by (1) `race` and (2) `ballot_rtn_status`.
 
-```javascript
+```js
 // Convert and use `oneLevelRollUpFlatMap()` on `ncVotersAll`
-const byRaceAndBallotStatus = ADD_FUNCTION_HERE
+const byRace = oneLevelRollUpFlatMap(
+  ncVotersAll,
+  "race",
+  "af"
+)
+
 ```
 
 Ok, let's see if `byRaceAndBallotStatus` shows up here by rendering it to the page.
 
-```javascript
-byRaceAndBallotStatus
+```js
+byRace
 ```
 
 <div class="error-caption">
