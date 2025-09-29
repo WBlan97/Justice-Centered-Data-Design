@@ -59,8 +59,8 @@ Again, we are going to continue working with the 2024 NC absentee voter CSV file
 2. Assign the data to a variable named `ncVotersAll`.
 3. Render it to the page in a separate codeblock.
 
-```javascript
-// FileAttachment() code here assigned to `ncVotersAll`
+```js
+const ncVotersAll = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024.csv").csv({typed: true})
 ```
 
 Output the data as an interactive array of objects below:
@@ -69,7 +69,7 @@ Output the data as an interactive array of objects below:
   Interactive output of full data set in <code>ncVotersAll</code>
 </p>
 
-```javascript
+```js
 // Convert to render on page
 ncVotersAll
 ```
@@ -80,7 +80,7 @@ We will be learning how to "read" large data sets with exploratory data analysis
 
 Observable has a suite of modules called **Inputs**. We're going to learn how to use [Observable's Inputs.table()](https://observablehq.com/framework/inputs/table) method to render the attached data as a table. In its most basic form, it expects a flat array of objects with properties, which is what `FileAttachment()` renders for us.
 
-```javascript
+```js
 // Most basic Inputs.table()
 Inputs.table(ncVotersAll)
 ```
@@ -94,18 +94,18 @@ Ok, that's easy, but that's way too much data for a table!
 Let's create a new table below that reduces what we want to see by implementing the following options within a second parameter, which is an object `{...}` with the following properties:
 
 - `columns`: Reduce the 17 columns to the following seven columns. Remember that you can access them via `data.columns`.
-    ```javascript
+    ```js
     columns: [
       "id_num", "county_desc", "race", "gender", "age",
       "ballot_request_party", "ballot_rtn_status"
     ]
     ```
 - `rows`: Default is 11.5. Let's change it to 25:
-    ```javascript
+    ```js
     rows: 25
     ```
 - `width`: Since some values in the table are short in length than others, let's define specific column widths. We can use an object where each provided column name is a key and value the desired width in pixels (px):
-    ```javascript
+    ```js
     width: {
       id_num: 20,
       county_desc: 90,
@@ -116,7 +116,7 @@ Let's create a new table below that reduces what we want to see by implementing 
     }
     ```
 - `header`: We can also rename the column names in the header. Use the desired original column names as keys in an object, where the values are new Strings to rename that column:
-    ```javascript
+    ```js
     header: {
       id_num: "ID",
       county_desc: "County",
