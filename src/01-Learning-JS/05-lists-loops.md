@@ -427,7 +427,7 @@ newProfessions
 **Goal**: Make a `for` loop that considers each item in the `professions` array and logs "Person's profession is ___", which "___" should be the profession from the array.
 
 ```js
-for (const profession of newProfessions) {
+for (const profession of lessProfessions) {
     console.log("Person's professions is " + profession)
   }
 ```
