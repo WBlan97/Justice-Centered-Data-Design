@@ -429,12 +429,18 @@ In this video, follow along as I explain the code for the `twoLevelRollUpFlatMap
 
 After you have watched the above video, it is time for you to try this custom function with the two example variables used in the our running angle.
 
-```javascript
-// Convert and create your own two-level grouping
+```js
+import {twoLevelRollUpFlatMap} from "./utils/utils.js"
+const byRaceAndParty = twoLevelRollUpFlatMap(
+  ncVotersAll,
+  "race",
+  "voter_party_code",
+  "af"
+)
 ```
 
-```javascript
-// Convert and output your variable here
+```js
+byRaceAndParty
 ```
 
 ## 2.3.7 RFS 3. Sum it up with D3's .sum()!
