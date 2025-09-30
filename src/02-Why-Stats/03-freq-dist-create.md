@@ -401,12 +401,16 @@ byRace
 
 Ok, now you try this custom function with a different variable from the dataset.
 
-```javascript
-// Convert and create your own one-level grouping
+```js
+const byCounty = oneLevelRollUpFlatMap(
+  ncVotersAll,
+  "county_desc",
+  "af"
+)
 ```
 
-```javascript
-// Convert and output your variable here
+```js
+byCounty
 ```
 
 ## E6. Import and use `twoLevelRollUpFlatMap()` on `ncVotersAll`
