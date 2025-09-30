@@ -148,7 +148,7 @@ If you review the String, you will notice how there are section breaks represent
 4. In the fourth codeblock, output the new variable, `vonnegutNoSBDQ`, to verify if it worked.
 
 ```js
-let vonnegutNoSB = vonnegut.replaceAll('*',"")
+const vonnegutNoSB = vonnegut.replaceAll('*',"")
 ```
 
 ```js
@@ -174,11 +174,14 @@ Ok, those chains were ridiculous, right? Below, complete the same outcome, but u
 </p>
 
 ```js
-let vonnegutArray = [",","\"","\'",".","?",";", ]
+let vonnegutArray = [",","\"","\'",".","?",";",]
 
-let vonnegutNoPuncs = for (p of vonnegutNoSB){
-if (p == vonnegutArray, --) 
-vonnegutNoSB.replaceall("")
+for (p of vonnegutArray){
+if (p == "--"){
+vonnegutNoPuncs.replaceAll(p, " ")
+} else {
+vonnegutNoPuncs.replaceAll(p, "") 
+  }
 }
 ```
 
