@@ -440,7 +440,7 @@ for (const profession of lessProfessions) {
 
 let newChildStatus = []
 for (const pNum of childStatus){
-if (pNum != "") {
+  if (pNum != "") {
 newChildStatus.push(pNum)
   }
 }
