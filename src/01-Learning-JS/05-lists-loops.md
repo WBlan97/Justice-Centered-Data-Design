@@ -419,7 +419,7 @@ console.log(lessProfessions)
 </p>
 
 ```js
-newProfessions
+lessProfessions
 ```
 
 ### E3. Loop through an array and log to the console
