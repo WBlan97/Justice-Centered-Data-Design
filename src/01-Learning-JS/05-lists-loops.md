@@ -410,7 +410,7 @@ lessProfessions
 **Goal**: Add a new profession as a String, `"spinster"`, to your `professions` list, then log it to the web console.
 
 ```js
-let newProfessions = ["married", "laborer", "widow", "laborer", "spinster"]
+lessProfessions.push("spinster")
 console.log(newProfessions)
 ```
 
