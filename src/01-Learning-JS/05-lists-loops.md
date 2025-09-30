@@ -411,7 +411,7 @@ lessProfessions
 
 ```js
 lessProfessions.push("spinster")
-console.log(newProfessions)
+console.log(lessProfessions)
 ```
 
 <p class="codeblock-caption">
