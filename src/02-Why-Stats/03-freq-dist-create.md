@@ -171,15 +171,25 @@ Finally, inside of the `/src/data/nc-voters/provenance/` folder, you can also re
 
 **Question**: After reviewing the above information, how would a SJ ethic inform your intiial understanding of the data, its collected values, and its context? List out in other information or questions that you sense might be missing about the data.
 
-ENTER_YOUR_RESPONSE_HERE
+From looking at these documents and considering an SJ Ethic/perspective, there are many omissions from the data I might be interested in adding. 
+
+- Information about whether a voter is blind, visually impaired, or has a disability that might've hindered them from requesting a ballot.
+- Information about whether a voter requested the ballot for themselves.
+- Information about the type of voter identification provided (driver's license, Id card).
 
 **Question**: Based on the case scenario as a communicator at Protect Democracy, and a SJ ethic in mind, what questions, i.e., angles, do you think may be helpful to meet the needs of your situation. Discuss any columns/fields that you are surprised about or spark any curiosities, and create a list of questions they spark in you.
 
-ENTER_YOUR_RESPONSE_HERE
+It would be useful to make sure every column serves an explicit purpose, and that columns do not gloss over or neglect important details or characteristics.
+
+For example, the election_dt column is only one string value, the date of the 2024 general election. What is the point in including this column if it is only one value? Similarly, how might location-based categories gloss over certain living arrangements?
+It is also important to take note of the large gap between many ballot_req_dt and ballot_send_dt values, and how that could lead to votes not registering or getting counted in some instances.
 
 **Question**: What can you understand about the `ballot_rtn_status` column? In other words, what types of values are possible?
 
-ENTER_YOUR_RESPONSE_HERE
+
+There are many values possible besides "accepted" and "returned" or "cancelled" including things like "spoiled," "witness info incomplete," "SDR Failed Verification," and "pending cure." This shows that there are many reasons ballots do not get accepted, and it is not always 100 percent clear why.
+
+
 
 ## 2.3.4 Calculate Absolute Grouped Frequencies with RFS Method
 
