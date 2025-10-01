@@ -531,17 +531,60 @@ Follow along with me in the video below to learn how to create a custom function
 </video>
 
 <!-- Your Reducer Functions -->
-```javascript
+```js
 // Convert and create your own reducer functions akin to "ACCEPTED" vs "REJECTED"
+
+const demReducerFunc = (d) => {
+  if (d.voter_party_code != null && d.voter_party_code.startsWith("DEM") == true)
+{
+  return d.af
+}
+else {
+  return 0
+}
+}
+
+const repReducerFunc = (d) => {
+  if (d.voter_party_code != null && d.voter_party_code.startsWith("REP") == true)
+{
+  return d.af
+}
+else {
+  return 0
+}
+}
+
+
 ```
 
 <!-- Call and use sumUpWithReducerTests() -->
-```javascript
+```js
 /**
  * Convert and use sumUpWithReducerTests().
  * Be sure to review the utils.js file, so you
  * can see the parameters needed for the function.
 **/
+import {sumUpWithReducerTests} from "./utils/utils.js"
+```
+
+```js
+const byRaceDemOrRep = sumUpWithReducerTests(
+  // Reducer funcs: array of objs
+  [
+    {type: "DEM", func: demReducerFunc},
+    {type: "REP", func: repReducerFunc},
+  ],
+  // Reducer props
+  ["WHITE", "BLACK or AFRICAN AMERICAN", "ASIAN", "UNDESIGNATED"],
+  // data
+  byRaceAndParty,
+  // L1
+  "race",
+  // L2
+  "voter_return_party",
+  // CKey
+  "af",
+)
 ```
 
 <p class="codeblock-caption">
@@ -549,8 +592,8 @@ Follow along with me in the video below to learn how to create a custom function
 </p>
 
 <!-- Your Reducer Functions -->
-```javascript
-// Convert and output your summed up data
+```js
+byRaceDemOrRep
 ```
 
 ## E8. Tabulated absolute frequencies of rejected ballots per race
@@ -562,8 +605,13 @@ Ok, tabulate the rolledup and summed-up results with `Inputs.table()`. Be sure t
 3. Sort the table based on what you deem the most helpful combo of column and ascending vs. descending.
 4. Be sure to provide a short response to the question about your table design.
 
-```javascript
-// Enter your table here
+```js
+Inputs.table(byRaceDemOrRep)
+byRaceDemOrRep.columns: [race: "race", voter: "voter_return_party", Absolute Frequency: "af"]
+
+-
+- `width`: Since some values in the table are short in length than others, let's define specific column widths. We can use an object where each provided column name is a key and value the desired width in pixels (px):
+   
 ```
 
 ### Question: Explain your table design choices.
