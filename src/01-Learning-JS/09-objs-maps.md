@@ -1029,13 +1029,20 @@ newInternMap
 ```javascript
 let ageLimits = [30, 40, 50, 60, 70, 80, 90, 100]
 
+for (const voter in nc2024SampleVoters){
+if (nc2024SampleVoters.age < ageLimits[0])
+console.log("Voter is Less than thirty")
+}
+{else if (nc2024SampleVoters.age > ageLimits[0] && nc2024SampleVoters.age < age[1] == "True")
 
-if
-else if 
+}
 else if
 else if
 else if
 else if
+
+
+
 ```
 
 ```javascript
