@@ -178,11 +178,11 @@ let vonnegutNoPuncs = vonnegutNoSB
 let vonnegutArray = [",","\"","\'",".","?",";","--"]
 
 
-for (p of vonnegutArray){
+for (const p of vonnegutArray){
 if (p == "--"){
-vonnegutNoPuncs.replaceAll(p, " ")
+vonnegutNoPuncs = vonnegutNoPuncs.replaceAll(p, " ")
 } else {
-vonnegutNoPuncs.replaceAll(p, "") 
+vonnegutNoPuncs = vonnegutNoPuncs.replaceAll(p, "") 
   }
 }
 ```
@@ -197,12 +197,12 @@ Sometimes, we need to isolate parts of a text for analysis by splitting it into 
 
 Create an array of strings of Vonnegut's story as a new variable called `vonnSplit`. Do so by splitting the newly cleaned String, `vonnegutNoPuncs`, with an empty single space (`" "`).
 
-```javascript
-// Convert me to a js block and complete the exercise
+```js
+const vonnSplit = vonnegutNoPuncs.split(" ")
 ```
 
-```javascript
-// Convert me to a js block and output `vonnSplit`
+```js
+vonnSplit
 ```
 
 ### E5. Create array of all hyphenated words
@@ -214,9 +214,23 @@ Ok, last exercise! Complete the following steps to create a new array that only 
 1. In a first codeblock, declare a new array called `hyphenatedWords`. Then, push only hyphenated words into it.
 2. In a second codeblock, output the new array to verify your work.
 
+```js
+const hyphenatedWords = []
+
+for (const word of vonnegut){
+  if (word.includes ("-")){
+  hyphenatedWords.push(word)
+  }
+}
+```
+
+```js
+hyphenatedWords
+```
+
 **Question**: What oddities do you notice about the outcome? Below, explain what you suggest is happenning, and what you would do to resolve the issue with isolating a better list of hyphenated words.
 
-ENTER_YOUR_RESPONSE_HERE
+It does not push the whole word to the array but only each instance of the hyphen. I counted 58 instances. 
 
 ## Submission
 
