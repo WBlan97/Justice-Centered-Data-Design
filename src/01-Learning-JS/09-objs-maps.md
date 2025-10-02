@@ -1029,7 +1029,7 @@ newInternMap
 ```js
 let ageLimits = [30, 40, 50, 60, 70, 80, 90, 100]
 
-let voterAgeGroup = nc2024SampleVoters.map((voter) => {
+let votersAgeGroup = nc2024SampleVoters.map((voter) => {
   let age = voter.age
   let ageGroup = ""
 
