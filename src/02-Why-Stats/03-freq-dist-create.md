@@ -606,11 +606,24 @@ Ok, tabulate the rolledup and summed-up results with `Inputs.table()`. Be sure t
 4. Be sure to provide a short response to the question about your table design.
 
 ```js
-Inputs.table(byRaceDemOrRep)
-byRaceDemOrRep.columns: [race: "race", voter: "voter_return_party", Absolute Frequency: "af"]
+Inputs.table(byRaceDemOrRep,
+  {header:
+  {race: "Voter's Race",
+  voter_return_party: "Voter's Party",
+  af: "Absolute Frequency"
+  }
+  },
+  {width:
+  {race: 20,
+  voter_return_party: 20,
+  af: 40
+  }  
+  }
+)
 
--
-- `width`: Since some values in the table are short in length than others, let's define specific column widths. We can use an object where each provided column name is a key and value the desired width in pixels (px):
+
+
+
    
 ```
 
@@ -618,7 +631,7 @@ byRaceDemOrRep.columns: [race: "race", voter: "voter_return_party", Absolute Fre
 
 **Q**: What *insights* and *new questions* did you garner from it that you hope to also illustrate/provide for your audience?
 
-ENTER_YOUR_RESPONSE_HERE
+I chose to elaborate on the variable headers, including changing race to voter's race, voter_return_party to voter's party, and writing out af as absolute frequency. Additionally, I made the width for both race and return party wider and shrunk the width of absolute frequency a bit because I wanted to highlight the results of the grouping and make it more apparent to the audience.
 
 ## Conclusion
 
