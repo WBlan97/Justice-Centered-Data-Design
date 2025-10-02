@@ -1026,26 +1026,48 @@ newInternMap
   </ol>
 </div>
 
-```javascript
+```js
 let ageLimits = [30, 40, 50, 60, 70, 80, 90, 100]
 
-for (const voter in nc2024SampleVoters){
-if (nc2024SampleVoters.age < ageLimits[0])
-console.log("Voter is Less than thirty")
-}
-{else if (nc2024SampleVoters.age > ageLimits[0] && nc2024SampleVoters.age < age[1] == "True")
+let voterAgeGroup = nc2024SampleVoters.map((voter) => {
+  let age = voter.age
+  let ageGroup = ""
 
-}
-else if
-else if
-else if
-else if
+  if (age < ageLimits[0]) {
+    ageGroup = "Under 30";
+  } else if (age < ageLimits[1]) {
+    ageGroup = "30–39"
+  } else if (age < ageLimits[2]) {
+    ageGroup = "40–49"
+  } else if (age < ageLimits[3]) {
+    ageGroup = "50–59"
+  } else if (age < ageLimits[4]) {
+    ageGroup = "60–69"
+  } else if (age < ageLimits[5]) {
+    ageGroup = "70–79"
+  } else if (age < ageLimits[6]) {
+    ageGroup = "80–89"
+  } else if (age < ageLimits[7] ) {
+    ageGroup = "90–99"
+  } else {
+    ageGroup = "100+"
+  }
 
+  return {
+    voter,
+    ageGroup: ageGroup
+  }
+})
 
+let ageGroup = d3.group(
+  nc2024SampleVoters,
+    (d) => d.votersAgeGroup
+)
 
 ```
 
-```javascript
+```js
+ageGroup
 ```
 
 ### E4. Group NC Voters by Your Desired set of 2-3 Fields as an InternMap()
@@ -1080,12 +1102,24 @@ First outline your procedure with steps below. Then, use the JS codeblock to per
 2. Enter step 2
 3. ...
 
-```javascript
-// Your code goes here
+```js
+const parseDateSlash = utcParse("%m/%d/%Y")
+
+let dateBallot = nc2024SampleVoters.map(
+  (ballot) => {
+    ballot.ballot_req_dt = parseDateSlash(ballot.ballot_req_dt)
+    return ballot
+  }
+)
+
 ```
 
-```javascript
-// Your grouped variable here
+```js
+let nc24VotersDate = d3.rollup(
+  nc2024SampleVoters,
+  (D) => D.length,
+  (d) => d.dateBallot,
+)
 ```
 
 ## Submission
