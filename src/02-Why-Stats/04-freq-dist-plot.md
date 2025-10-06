@@ -310,9 +310,16 @@ Let's plot it as a histogram!
 
 1. Create your layout with `Plot.plot({})`
   ```javascript
-  Plot.plot({
-    // Options will go in here
-  })
+  Plot.recty({
+    x: "ballot_req_dt_month",
+    y: "af",
+    tip: true,
+    insetLeft: -3,
+    insetRight: -3,
+    insetBottom: 1,
+    interval: 4,
+    }
+  ),
   ```
 2. Our frequency numbers on the y-axis will need some margins to fit in our layout box, so add margins to the layout on the left side with `marginLeft: 60,`.
 3. Draw your marks by adding the `marks` option, whose value is an Array: `marks: [],`
