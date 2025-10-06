@@ -2,7 +2,7 @@
 
 ```js
 import {utcParse, utcFormat} from "d3-time-format";
-import {oneLevelRollupFlatMap, TwoLevelRollUpFlatMap, getUnique from "Documents/GitHub/Justice-Centered-Data-Design/src/02-Why-Stats/utils/utils.js"}
+import {oneLevelRollUpFlatMap, twoLevelRollUpFlatMap} from "./utils/utils.js"
 
 ```
 
