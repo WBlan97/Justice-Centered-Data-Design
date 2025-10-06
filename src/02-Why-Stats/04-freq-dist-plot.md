@@ -2,7 +2,7 @@
 
 ```js
 import {utcParse, utcFormat} from "d3-time-format";
-// Import your functions
+import {oneLevelRollupFlatMap, TwoLevelRollUpFlatMap, getUnique from "Documents/GitHub/Justice-Centered-Data-Design/src/02-Why-Stats/utils/utils.js"}
 
 ```
 
@@ -127,8 +127,8 @@ Again, we are going to continue working with the 2024 NC absentee voter CSV file
 2. Assign the data to a variable named `ncVotersAll`.
 3. Render it to the page in a separate codeblock.
 
-```javascript
-// FileAttachment() code here.
+```js
+const ncVotersAll = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024.csv").csv({typed:true})
 ```
 
 <p class="codeblock-caption">
@@ -145,12 +145,13 @@ ncVotersAll
 Let's use our helpful `mapDateObject()` function in the `utils.js` file, so we can easily create Date() objects and new date fields, such as week numbers.
 
 <!-- Create date objects and new date props -->
-```javascript
+```js
 /**
  * Use the mapDateObject() function below
  * and assign the returned data to a new
  * constant called `ncUpdates`
 **/
+const ncUpdates = mapDateObject()
 
 ```
 
@@ -179,8 +180,13 @@ Alright, let's use our custom utility functions to create some data to plot. Con
 
 <!-- Use the custom functions here -->
 ```javascript
-// Convert and create the data described above
+const afByRace = oneLevelRollUpFlatMap(
+  ncUpdates,
+  "race",
+  "af"
+)
 
+const afByWeekAndRace = twoLevelRollUpFlatMap(ncUpdates, "ballot_req_dt_week", "race", "af")
 ```
 
 <p class="codeblock-caption">
@@ -271,15 +277,18 @@ I've supplied you with the skeleton for this plot. Be sure to add the options no
 
 ```javascript
 Plot.plot({
-  // 1. Add comma-separated layout options
-
   marks: [
-    // 2. Add comma-separated marks options
-
-    // 3. Create your bar chart
-    Plot.barY()
+    Plot.ruleY([0]),
+    Plot.barY(
+      afByRace,
+      {
+        x: "race",
+        y: "af",
+      } 
+    ),
   ]
 })
+
 ```
 
 ## E6. Histograms: Plotting interval/ratio data with *Plot.rectY()*
