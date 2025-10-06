@@ -1,5 +1,6 @@
 import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:@d3";
+import { utcFormat, utcParse } from "d3-time-format";
 
 /**
  * EXPORTED FUNCTIONS
@@ -14,3 +15,8 @@ export rollupByRaceAndStatus = (data) => {
     return entries.map(([status, sum]) => ({race, status, sum, percentage: total ? sum / total : 0}))
   })
 }
+
+let parseDate = utcParse("%m, %d, %Y")
+let formatWeekNumber = Number(utcFormat("%V"))
+
+
