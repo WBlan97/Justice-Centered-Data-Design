@@ -112,7 +112,6 @@ const ncVotersAll = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024_no
 ```js
 ncVotersAll
 ```
-
 ## E2. Convert String Dates to Date() Objects
 
 Think back to chapter **1.7 - Dates & Time**. We learned how date information in datasets are often tricky to work with, so we need to learn how to convert date values to Date() objects, which we can do easily with D3.js' date parsers and formatters.
