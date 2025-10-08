@@ -16,6 +16,8 @@ import {utcParse,utcFormat} from "d3-time-format";
 
 
 // Complete this codeblock code from Chapter E-2.2, exercise 2 below
+let parseDate = utcParse("%m, %d, %Y")
+let formatWeekNumber = Number(utcFormat("%V"))
 export const mapDateObject = (data, dateString) => {
 
   // 1. Use .map() to iterate the `data` and create new date props
@@ -33,6 +35,7 @@ export const mapDateObject = (data, dateString) => {
        *    called `objField`.
       **/
      ballot[objField] = parseDate(ballot[dateField])
+     ballot[weekField] = Number(formatWeekNumber(ballot[objField]))
     }
     return ballot
   })
@@ -235,112 +238,3 @@ export const sumUpWithReducerTests = (reducerFunctions, reducerProperties, data,
  *     third level.
 **/
 
-export const mapDateObject = (data, dateString) => {
-
-  // 2. Use .map() to iterate the `data` and create new date props
-  const updatedData = data.map((ballot) => {
-
-    // 3. Create dynamic keys to use for new properties
-    const objField = dateString+"_obj"
-    const weekField = dateString+"_week"
-
-    // 4. Skip any null request dates
-    if (ballot[dateString] != null) {
-      /**
-       * 5. Assign a date object to a new
-       *    property for each `ballot`
-       *    called `objField`.
-      **/
-     ballot[objField] = parseDate(ballot[dateField])
-    }
-    return ballot
-  })
-
-  /**
-   * 5. Sort the data by week numbers in ascending order.
-   * I also recommend sorting your data
-   * in ascending order before returning
-   * it back, since you normally want your
-   * data to mirror the concept recorded.
-   * In this case, weeks are temporal data
-   * in a chronological sequence: 1, 2, 3, ...
-  **/
-  const sortedData = updatedData.sort(
-    // Works like an accessor function to pass two objects to compare
-    (a, b) => {
-      // Uses D3's ascending() function to sort by the given properties
-      return ascending(a.ballot_req_dt_week, b.ballot_req_dt_week)
-    }
-  )
-
-  // 6. Return the populated and sorted array of objects
-  return sortedData
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let parseDate = utcParse("%m, %d, %Y")
-let formatWeekNumber = Number(utcFormat("%V"))
-export const mapDateObject = (data, dateString) => {
-
-  // 2. Use .map() to iterate the `data` and create new date props
-  const updatedData = data.map((ballot) => {
-
-    // 3. Create dynamic keys to use for new properties
-    const objField = dateString+"_obj"
-    const weekField = dateString+"_week"
-
-    // 4. Skip any null request dates
-    if (ballot[dateString] != null) {
-      /**
-       * 5. Assign a date object to a new
-       *    property for each `ballot`
-       *    called `objField`.
-      **/
-     ballot[objField] = parseDate(ballot[dateField])
-    }
-    return ballot
-  })
-
-  /**
-   * 5. Sort the data by week numbers in ascending order.
-   * I also recommend sorting your data
-   * in ascending order before returning
-   * it back, since you normally want your
-   * data to mirror the concept recorded.
-   * In this case, weeks are temporal data
-   * in a chronological sequence: 1, 2, 3, ...
-  **/
-  const sortedData = updatedData.sort(
-    // Works like an accessor function to pass two objects to compare
-    (a, b) => {
-      // Uses D3's ascending() function to sort by the given properties
-      return ascending(a.ballot_req_dt_week, b.ballot_req_dt_week)
-    }
-  )
-
-  // 6. Return the populated and sorted array of objects
-  return sortedData
-
-}
