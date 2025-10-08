@@ -2,7 +2,7 @@
 
 ```js
 import {utcParse, utcFormat} from "d3-time-format";
-import {oneLevelRollUpFlatMap, twoLevelRollUpFlatMap} from "./utils/utils.js"
+import {oneLevelRollUpFlatMap, twoLevelRollUpFlatMap, mapDateObject} from "./utils/utils.js"
 
 ```
 
@@ -135,7 +135,7 @@ const ncVotersAll = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024.cs
   Interactive output of full data set.
 </p>
 
-```javascript
+```js
 // Convert if you want to print the data to the page
 ncVotersAll
 ```
@@ -452,7 +452,9 @@ For this plot, we want to include all ballot requests and statuses -- except any
 Assign it to a constant variable named `ncMailBallots`.
 
 <!-- JS codeblock to attach nc_absentee_mail_2024_no_dropped_dupes.csv -->
-
+```js
+const ncVotersAll = FileAttachment("./../data/nc-voters/nc_absentee_mail_2024_no_dropped_dupes.csv").csv({typed:true})
+```
 
 ### 2. Map date objects to OG data
 
@@ -461,7 +463,10 @@ Map those Date objects and other week properties with your custom `mapDateObject
 Assign it to a constant variable named `ncMailBallotsUpdated`.
 
 <!-- JS codeblock to map date objects as ncMailBallotsUpdated-->
+```js
+mapDateObject = (data, "ballot_req_dt_week")
 
+```
 
 Output `ncMailBallotsUpdated` below:
 
