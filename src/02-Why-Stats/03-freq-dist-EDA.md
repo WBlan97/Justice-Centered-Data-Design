@@ -327,7 +327,7 @@ return d.ballot_rtn_status
 ### 4.2 Write your reducer properties and objectify your reducer functions
 
 <!-- Reducer Properties & Objectify reducerFuncs -->
-```javascript
+```js
 const reducerProps = [
   // Let's reduce the data to these two values for race
   "WHITE", "BLACK or AFRICAN AMERICAN"
@@ -336,11 +336,11 @@ const reducerProps = [
 const reducerFuncs = [
   {
     type: "ACCEPTED",
-    func:  // ENTER FUNCTION TO EVAL AS "ACCEPTED"
+    func: getAcceptedBallots
   },
   {
     type: "REJECTED",
-    func:  // ENTER FUNCTION TO EVAL AS "REJECTED"
+    func: getRejectedBallots
   },
 ]
 
@@ -365,7 +365,7 @@ Instead of creating a generalizable function for all three-level cases, some tim
 Convert the below codeblock and develop it further in this notebook to complete the task. We're not creating a module, because sometimes the complexity of the situation just demands using simpler methods to meet the situation. Indeed, there's nothing wrong with using the helpful set of for loops and conditions to get the job done. `:-)`
 
 <!-- Counting it all up through a series of custom loops -->
-```javascript
+```js
 // 1. Create array for tallied frequency results
 const afGroupedPercResults = []
 
@@ -379,11 +379,11 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
 
   // 3. Loop through testor functions with your custom conditions
   //    - Use `for...in` so we can loop as many tests as provided
-  for () {
+  for (const in ) {
 
     // 4. Loop through interested properties
     //    - Use `for...in` so we can loop as many tests as provided
-    for () {
+    for (const in) {
 
       /**
        * 3. Calculate the sum grand total
@@ -411,7 +411,7 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
        *    3. REDUCER FUNCTION return value.
       **/
       const summedUpLevel = d3.sum(
-        // Replace me with the `afByWeekRaceStatus` data
+        afByWeekRaceStatus
         /**
          * Replace me with your accessor function.
          * Remember to use your reducer function and property
