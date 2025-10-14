@@ -16,13 +16,12 @@ import {utcParse,utcFormat} from "d3-time-format";
 
 
 // Complete this codeblock code from Chapter E-2.2, exercise 2 below
-let parseDate = utcParse("%m, %d, %Y")
-let formatWeekNumber = Number(utcFormat("%V"))
+let parseDate = utcParse("%m/%d/%Y")
+let formatWeekNumber = utcFormat("%W")
 export const mapDateObject = (data, dateString) => {
 
   // 1. Use .map() to iterate the `data` and create new date props
   const updatedData = data.map((ballot) => {
-
     // 2. Create dynamic keys to use for new properties
     const objField = dateString+"_obj"
     const weekField = dateString+"_week"
@@ -34,8 +33,8 @@ export const mapDateObject = (data, dateString) => {
        *    property for each `ballot`
        *    called `objField`.
       **/
-     ballot[objField] = parseDate(ballot[dateField])
-     ballot[weekField] = Number(formatWeekNumber(ballot[objField]))
+     ballot[objField] = parseDate(ballot[dateString])
+    ballot[weekField] = Number(formatWeekNumber(ballot[objField]))
     }
     return ballot
   })
@@ -237,4 +236,50 @@ export const sumUpWithReducerTests = (reducerFunctions, reducerProperties, data,
  * (4) Add 1 more nested .flatMap() to handle the
  *     third level.
 **/
+
+  // 1. Rollups on 3 nested levels
+export const threeLevelRollUpFlatMap = (data, level1Key, level2Key, level3Key, countKey) => {
+
+  const colTotals = rollups(
+    data,
+    (v) => v.length, // Count length of leaf node
+    (d) => d[level1Key], // Accessor at 1st level
+    (d) => d[level2Key], // Accessor at 2nd level
+    (d) => d[level3Key], // Accessor at 3rd level
+  )
+
+  // 2. Flatten 1st grouped level back to array of objects
+  const flatTotals = colTotals.flatMap((l1Elem) => {
+
+    // 2.1 Assign level 1 key
+    let l1KeyValue = l1Elem[0]
+
+    // 2.2 Flatten 2nd grouped level
+    const flatLevels = l1Elem[1].flatMap((l2Elem) => {
+
+      // 2.2.1 Assign level 2 key
+      let l2KeyValue = l2Elem[0]
+      // 3 Flatten 3rd grouped level
+      const flatLevels2 = l2Elem[1].flatMap((l3Elem) => {
+      // Assign level 3 key
+        let l3KeyValue = l3Elem[0]
+
+        // // 2.2.2 Return fully populated array of objects
+        return {
+          [level1Key]: l1KeyValue,
+          [level2Key]: l2KeyValue,
+          [level3Key]: l3KeyValue,
+          [countKey]: l3Elem[1]
+        }
+      })
+      // 3. Return flattened array of objects
+      return flatLevels2;
+    })
+   // 4. Return flattened array of objects
+    return flatLevels
+  }); 
+
+  // 5. Return the sorted totals
+  return flatTotals
+}
 
