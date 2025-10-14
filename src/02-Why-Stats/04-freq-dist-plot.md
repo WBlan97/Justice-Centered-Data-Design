@@ -465,7 +465,6 @@ Assign it to a constant variable named `ncMailBallotsUpdated`.
 <!-- JS codeblock to map date objects as ncMailBallotsUpdated-->
 ```js
 mapDateObject = (data, "ballot_req_dt_week")
-
 ```
 
 Output `ncMailBallotsUpdated` below:
@@ -510,6 +509,15 @@ Finally, we need to reduce our grouped data to either being ACCEPTED or REJECTED
   Carefully consider which interpretive level to create, when you calculate the percentages for each group.
 </p>
 
+```
+
+for const weekNumber of 
+const getRejectedBallots = (d) =>
+if (d.ballot_rtn_status) != null && d.ballot_rtn_status.startswith("Accepted" == true)
+
+
+```
+
 I recommend reusing your code from the last chapter.
 
 ### 5. Filter the data for plotting
@@ -521,6 +529,14 @@ In a codeblock, use JS' `.filter()` on your grouped results to create a two cons
 <p class="figure-caption">
   Example outputs from the filtering work to create 2 distinct arrays of objects.
 </p>
+
+```
+groupedresults.filter(
+  (d) => {
+    if(d.race == "BlACK OR AFRICAN AMERICAN" && d.ballot_rtn_status)
+  }
+)
+```
 
 #### WHITE, rejected, weeks 0-45
 ![white race rejected ballot grouping output](./../assets/images/2-why-stats/04-plot-filtering-groups-white-rej.png)

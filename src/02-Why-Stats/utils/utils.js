@@ -258,7 +258,10 @@ export const threeLevelRollUpFlatMap = (data, level1Key, level2Key, countKey) =>
       // 2.2.1 Assign level 2 key
       let l2KeyValue = l2Elem[0]
 
-      // l2Elem[1].flatMap()
+      const flatLevels = l1Elem[1].flatMap((l2Elem) => {
+
+      // 2.2.1 Assign level 2 key
+      let l2KeyValue = l2Elem[0]
 
       // 2.2.2 Return fully populated object
       return {
