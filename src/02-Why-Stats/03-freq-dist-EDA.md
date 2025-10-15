@@ -301,8 +301,6 @@ The result should resemble the following output:
 const getAcceptedBallots = (d) => {
   if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("Accepted")) {
     return d.ballot_rtn_status
-  } else {
-  return 0
   }
 }
 /**
@@ -317,8 +315,6 @@ const getAcceptedBallots = (d) => {
 getRejectedBallots = (d) => {
 if (d.ballot_rtn_status == null || d.ballot_rtn_status.startswith("Accepted")){
   return 0
-} else {
-return d.ballot_rtn_status
   }
 }
 
