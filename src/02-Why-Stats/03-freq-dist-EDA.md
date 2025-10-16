@@ -375,11 +375,11 @@ for (const weekNumber of uniqueListOfWeekNumbers) {
 
   // 3. Loop through testor functions with your custom conditions
   //    - Use `for...in` so we can loop as many tests as provided
-  for (const in ) {
+  for (const accepted in reducerProps) {
 
     // 4. Loop through interested properties
     //    - Use `for...in` so we can loop as many tests as provided
-    for (const in) {
+    for (const in reducerFuncs) {
 
       /**
        * 3. Calculate the sum grand total
