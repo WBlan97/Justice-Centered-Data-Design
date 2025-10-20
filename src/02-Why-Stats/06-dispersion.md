@@ -1,4 +1,4 @@
-# Variability
+# Variability.
 
 ```js
 import {utcParse,utcFormat} from "d3-time-format";
@@ -70,7 +70,7 @@ let rejPercentages = rejectedOnly.map(
 ```
 
 #### Location
-
+-
 - **Average mean**: ${(d3.mean(rejectedOnly, d => d.percentage) * 100).toFixed(2)}%
 - **Median**: ${(d3.median(rejectedOnly, d => d.percentage) * 100).toFixed(2)}%
 - **Mode**: ${(d3.mode(rejectedOnly, d => d.percentage) * 100).toFixed(2)}%
@@ -109,8 +109,8 @@ Plot.plot({
       {
         x: "ballot_req_dt_week",
         y: "percentage",
-        // r: "af",
-        fill: "race",
+        r: "af",
+        stroke: "race",
         tip: true,
       }
     ),
