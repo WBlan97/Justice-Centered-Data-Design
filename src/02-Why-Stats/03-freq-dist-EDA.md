@@ -299,8 +299,10 @@ The result should resemble the following output:
 ```javascript
 
 const getAcceptedBallots = (d) => {
-  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("Accepted")) {
+  if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("Accepted" )) {
     return d.ballot_rtn_status
+  } else {
+    return 0
   }
 }
 /**
@@ -313,9 +315,13 @@ const getAcceptedBallots = (d) => {
 // Now, do the same for what will become "REJECTED" statuses
 
 getRejectedBallots = (d) => {
-if (d.ballot_rtn_status == null || d.ballot_rtn_status.startswith("Accepted")){
-  return 0
+if (d.ballot_rtn_status == null || !d.ballot_rtn_status.startsWith("Accepted"))
+{
+  return d.af
   }
+else {
+  return 0
+}
 }
 
 ```
@@ -372,14 +378,17 @@ const afGroupedPercResults = []
  *    in the first grouping level.
 **/
 for (const weekNumber of uniqueListOfWeekNumbers) {
-
-  // 3. Loop through testor functions with your custom conditions
-  //    - Use `for...in` so we can loop as many tests as provided
+if(
+  ballot === weekNumber &&
+  d.ballot_rtn_status === d[rProperty]
+)
   for (const accepted in reducerProps) {
+if( d.ballot_rtn_status == 
 
+)
     // 4. Loop through interested properties
     //    - Use `for...in` so we can loop as many tests as provided
-    for (const in reducerFuncs) {
+    for (const rejected in reducerFuncs) {
 
       /**
        * 3. Calculate the sum grand total
