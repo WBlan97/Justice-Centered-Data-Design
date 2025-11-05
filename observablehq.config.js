@@ -154,6 +154,10 @@ export default {
         name: "3.2 Processing Text",
         path: "/03-Textual-Analysis/02-processing"
       },
+      {
+        name: "3.3 Processing Text",
+        path: "/03-Textual-Analysis/03-ner"
+      },
 
 
     // HELP PAGES
