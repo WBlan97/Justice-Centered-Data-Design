@@ -166,19 +166,19 @@ deckInstance.setProps({
       getAlignmentBaseline: 'center',
       getPixelOffset: [0, -10]
     }),
-    // 3. Add Icons
-    // new IconLayer({
-    //   id: 'IconLayer',
-    //   data: lindgren,
-    //   // data: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/bart-stations.json',
-    //   getColor: d => [Math.sqrt(d.exits), 140, 0],
-    //   getIcon: d => 'marker',
-    //   getPosition: d => d.coordinates,
-    //   getSize: 40,
-    //   iconAtlas: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png',
-    //   iconMapping: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.json',
-    //   pickable: true
-    // })
+    3. Add Icons
+    new IconLayer({
+      id: 'IconLayer',
+      data: lindgren,
+      data: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/bart-stations.json',
+      getColor: d => [Math.sqrt(d.exits), 140, 0],
+      getIcon: d => 'marker',
+      getPosition: d => d.coordinates,
+      getSize: 40,
+      iconAtlas: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png',
+      iconMapping: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.json',
+      pickable: true
+    })
   ]
 });
 ```
