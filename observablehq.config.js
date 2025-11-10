@@ -140,26 +140,34 @@ export default {
     },
     // 3. Textual Analysis
     {
-    name: "3. Textual Analysis",
-    open: false,
-    pages: [
-      {
-        name: "Weighting Words with TF-IDF",
-        path: "/03-Textual-Analysis/01-weighting-words"
-      }
-    ]
-  },
-
-      {
-        name: "3.2 Processing Text",
-        path: "/03-Textual-Analysis/02-processing"
-      },
-      {
-        name: "3.3 Processing Text",
-        path: "/03-Textual-Analysis/03-ner"
-      },
-
-
+      name: "3. Textual Analysis",
+      open: false,
+      pages: [
+        {
+          name: "3.1 Weighting Words with TF-IDF",
+          path: "/03-Textual-Analysis/01-weighting-words"
+        },
+        {
+          name: "3.2 Processing Text",
+          path: "/03-Textual-Analysis/02-processing"
+        },
+        {
+          name: "3.3 Named Entity Recognition",
+          path: "/03-Textual-Analysis/03-ner"
+        },
+      ]
+    },
+    // 4. GEO SPATIAL
+    {
+      name: "4. Geo-Spatial",
+      open: false,
+      pages: [
+        {
+          name: "4.1 Geo Data Basics",
+          path: "/04-Geo/01-geo-basics"
+        },
+      ]
+    },
     // HELP PAGES
     {
       name: "Help",
