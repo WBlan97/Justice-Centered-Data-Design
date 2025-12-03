@@ -181,6 +181,11 @@ export default {
           name: "Data Processing",
           path: "/Help/processing"
         },
+        {
+          name: "Normalizing Values",
+          path: "/Help/normalizing"
+        },
+        
       ]
     },
     // MIDTERM
