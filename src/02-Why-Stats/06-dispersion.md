@@ -178,7 +178,7 @@ A horizon chart displays data over a continuous interval, such as a timeframe li
 
 ```js
 const percBands = view(
-  Inputs.range([2, 8], {step: 1, label: "# of Bands for Horizon Chart"})
+  {step: 1, label: "# of Bands for Horizon Chart"})
 )
 ```
 
