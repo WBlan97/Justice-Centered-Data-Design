@@ -314,7 +314,7 @@ const getAcceptedBallots = (d) => {
 
 // Now, do the same for what will become "REJECTED" statuses
 
-getRejectedBallots = (d) => {
+const getRejectedBallots = (d) => {
 if (d.ballot_rtn_status == null || !d.ballot_rtn_status.startsWith("Accepted"))
 {
   return d.af
@@ -378,17 +378,22 @@ const afGroupedPercResults = []
  *    in the first grouping level.
 **/
 for (const weekNumber of uniqueListOfWeekNumbers) {
-if(
-  ballot === weekNumber &&
-  d.ballot_rtn_status === d[rProperty]
-)
-  for (const accepted in reducerProps) {
-if( d.ballot_rtn_status == 
 
-)
-    // 4. Loop through interested properties
-    //    - Use `for...in` so we can loop as many tests as provided
-    for (const rejected in reducerFuncs) {
+  for (const rProperty in reducerProps) {
+
+  const weekRaceAF = d3.sum(
+        afByWeekRaceStatus,
+        (d) => {
+          if (d.ballot_req_dt_week == weekNumber && d.ballot_rtn_status != null && d.race == reducerProps[rProperty]) {
+            return d.af
+          }
+          else {
+            return 0
+          }
+        }
+      ) 
+  
+    for (const testObj in reducerFuncs) {
 
       /**
        * 3. Calculate the sum grand total
@@ -401,14 +406,8 @@ if( d.ballot_rtn_status ==
        *    **IMPORTANT!!!**
        *    Make sure you ignore null values
        *    for `ballot_rtn_status`
-      **/
-      const weekRaceAF = d3.sum(
-        // Replace me with the iterable: `afByWeekRaceStatus`
-        // Replace me with your accessor function here
-
-        // WARNING: Remember to separate your iterable and accessor with a comma
-      )
-
+      **
+   
       /**
        * 6. Tally absolute frequency based on
        *    1. WEEK NUMBER,
@@ -416,7 +415,16 @@ if( d.ballot_rtn_status ==
        *    3. REDUCER FUNCTION return value.
       **/
       const summedUpLevel = d3.sum(
-        afByWeekRaceStatus
+        afByWeekRaceStatus,
+       (d) => {
+        if (d.race == reducerProps[rProperty] && d.ballot_req_dt_week == weekNumber) {
+          const TotalToSum = reducerFuncs[testObj]["func"](d)
+          return TotalToSum
+        } else {
+          return 0
+        }
+      }
+    )
         /**
          * Replace me with your accessor function.
          * Remember to use your reducer function and property
@@ -425,7 +433,6 @@ if( d.ballot_rtn_status ==
         **/
 
        // WARNING: Remember to separate your iterable and accessor with a comma
-      )
 
       // 7. Push result to array of results
       /**
@@ -440,17 +447,20 @@ if( d.ballot_rtn_status ==
       **/
       afGroupedPercResults.push({
         // Add the current week
-        ballot_req_dt_week: ,
+        ballot_req_dt_week: weekNumber,
+        race: 
         // Add the current reducer property here
-        race: reducerProps[rProperty],
+      reducerProps[rProperty],
         // Add the current reducer function "type"
-        ballot_rtn_status: ,
+        ballot_rtn_status: 
+         // Add the current reducer function "type"
+      reducerFuncs[testObj]["type"],
+        af: summedUpLevel,
+          // Calculate the percentage with:
+        percentage: 
         // Add the AF value for the week here
-        af: ,
-        // Calculate the percentage with:
-        // the total for the grouped level (summedUpLevel)
+      summedUpLevel/weekRaceAF,
         // divided by the total for the entire week (weekRaceAF)
-        percentage: ,
       })
 
     }
@@ -462,7 +472,7 @@ if( d.ballot_rtn_status ==
   Output of afGroupedPercResults.
 </p>
 
-```javascript
+```js
 afGroupedPercResults
 ```
 
@@ -477,27 +487,37 @@ Tabulate the data here. Use `Inputs.table()`'s `format` option to express the pe
   You can then use <code>Inputs.table()</code>'s <code>format: { object_key: (x) => //use `x` in an accessor here, // Add more ... }</code> to express data appropriately. (Reference Observable Framework's <a href="https://observablehq.com/framework/inputs/table#inputs-3a86ea-4" target="_blank" rel="noreferrer noopenner">example in their docs</a>)
 </p>
 
-```javascript
-// Convert and tabulate afGroupedPercResults here
+```js
+import { format } from "d3-format"
+```
+
+```js
+const pctFormat = format(".2%")
+
+Inputs.table(afGroupedPercResults, {
+ format: {
+  percentage: (x) => pctFormat(x),
+  af: (x) => format(",")(x)
+}})
 ```
 
 ## Question: Why not percentage of all ballots per week?
 
 Why did I direct you to sum the total for the week > race group, rather than calculate the percentage based on the grand sum total for the entire week across all included races? How are those percentages' respective *interpretive levels* different?
 
-YOUR_RESPONSE_HERE
+The reason we did not calculate all the the percentages of ballots per week is because we are interested in the racial composition of the ballot return behavior. The entire sum would not have given us this data.
 
 ## Question: New insights?
 
 After tabulating the data, as well as sorting and reviewing it, what new angles and questions come to mind?
 
-YOUR_RESPONSE_HERE
+I am interested in how acceptance and rejection stats may have changed over time, plus how some racial groups may experiene higher rejections rates.
 
 ## Question: Difficulties?
 
 After tabulating the data, as well as sorting and reviewing it, what difficulties are you experiencing as you review so much data in a table?
 
-YOUR_RESPONSE_HERE
+It is harder to identify patters with such a large tabulation.
 
 ## Conclusion
 
