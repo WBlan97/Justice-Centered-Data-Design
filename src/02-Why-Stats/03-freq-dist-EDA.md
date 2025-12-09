@@ -296,7 +296,7 @@ The result should resemble the following output:
 ### 4.1 Write your reducer functions
 
 <!-- Reducer Functions -->
-```javascript
+```js
 
 const getAcceptedBallots = (d) => {
   if (d.ballot_rtn_status != null && d.ballot_rtn_status.startsWith("Accepted" )) {
