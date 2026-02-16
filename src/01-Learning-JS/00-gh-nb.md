@@ -94,10 +94,20 @@ Here's that process again for you:
 **Goal**: For this exercise, we're keeping the additional content simple, so we can focus on the GH methodology noted above. So, to make some changes to this chapter, complete the following tasks:
 
 1. Create a multiline JS codeblock that renders to the page with the "javascript" keyword after the first 3 backticks.
-2. Inside the "javascript" codeblock, add the following text `// I will show up on the page`.
+2. Inside the "javascript" codeblock, add the following text 
+
+```javascript
+// I will show up on the page.
+```
+
     - **NOTE**: This codeblock should render on the locally hosted page.
 3. Create another multiline JS codeblock that is executable by using the "js" keyword after the first 3 backticks.
-4. Inside the "js" codeblock, add the following text `console.log("I do NOT show up on the page")`.
+4. Inside the "js" codeblock, add the following text 
+
+```js
+console.log("I do NOT show up on the page").
+```
+
     - **NOTE**: This codeblock should NOT render on the locally hosted page. I'll show where to find it in class. `:-)`
 
 ## Conclusion
