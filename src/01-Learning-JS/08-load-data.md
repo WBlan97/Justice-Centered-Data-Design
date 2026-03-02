@@ -234,10 +234,26 @@ In this case, load the following CSV file: `nc_absentee_mail_2024.csv`.
 2. In the second codeblock, use `console.log()` to log the following properties to the console: `.name` and `.size`.
 3. Still in the second codeblock, add a second `console.log()` and log the first object in the Array to the console.
 
+<<<<<<< Updated upstream
 ```javascript
 // Your FileAttachment() code goes here
 ```
 
+=======
+```js
+const ncAbsentee = FileAttachment("./../data/nc-voters/absentee_2024_aggregated.csv").csv({typed:true})
+```
+
+```js
+console.log(ncAbsentee.name)
+console.log(ncAbsentee.size)
+```
+
+
+```javascript
+```
+
+>>>>>>> Stashed changes
 ```javascript
 // Your other code with your variable goes here
 ```
